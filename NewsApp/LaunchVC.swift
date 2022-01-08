@@ -28,9 +28,12 @@ class LaunchVC: UIViewController {
             
             print("Ann ja")
             //present MainNewVC
-            let demoVC = UIViewController()
-            demoVC.view.backgroundColor = .red
+            
+            let mainNewsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNewsVC") as! MainNewsVC
+
 //            option#1
+//            let demoVC = UIViewController()
+//            demoVC.view.backgroundColor = .red
 //            demoVC.modalPresentationStyle = .fullScreen //.pageSheet or .fullScreen
 //            self?.present(demoVC, animated: true, completion: nil)
             
@@ -38,7 +41,7 @@ class LaunchVC: UIViewController {
             guard let window = self.view.window else {
                 return
             }
-            window.rootViewController = demoVC
+            window.rootViewController = mainNewsVC
             window.makeKeyAndVisible()
             UIView.transition(with: window,
                                   duration: 0.3,
@@ -50,6 +53,7 @@ class LaunchVC: UIViewController {
     }
 
     deinit {
+
         print("LaunchVC deinit")
     }
     func animateDinosaue() {
@@ -57,15 +61,4 @@ class LaunchVC: UIViewController {
         view.bringSubviewToFront(dinosaurView)
         dinosaurView.play()
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
