@@ -54,7 +54,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-gO-PD3">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-gO-PD3">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="28N-Ah-jXG">
@@ -64,31 +64,36 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iDf-5V-NQH">
-                                                            <rect key="frame" x="100" y="0.0" width="314" height="100"/>
+                                                            <rect key="frame" x="105" y="0.0" width="309" height="100"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItR-qd-0jp">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="66.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="309" height="60"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReT-1h-DWJ">
-                                                                    <rect key="frame" x="0.0" y="66.5" width="314" height="33.5"/>
+                                                                    <rect key="frame" x="0.0" y="60" width="309" height="30"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slm-1Z-QoF">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="33.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="65.5" height="30"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="tinted" title="Status" cornerStyle="capsule"/>
                                                                         </button>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqS-2H-Md6">
-                                                                            <rect key="frame" x="70" y="0.0" width="244" height="33.5"/>
+                                                                            <rect key="frame" x="65.5" y="0.0" width="243.5" height="30"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </view>
                                                                     </subviews>
                                                                 </stackView>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0N-ml-etF" userLabel="spacer">
+                                                                    <rect key="frame" x="0.0" y="90" width="309" height="10"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </view>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="ReT-1h-DWJ" firstAttribute="height" secondItem="ItR-qd-0jp" secondAttribute="height" multiplier="0.5" id="3xh-AJ-YHO"/>
+                                                                <constraint firstItem="i0N-ml-etF" firstAttribute="height" secondItem="iDf-5V-NQH" secondAttribute="height" multiplier="0.1" id="QGB-sN-xIG"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
