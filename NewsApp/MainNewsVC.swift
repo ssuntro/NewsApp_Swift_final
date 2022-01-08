@@ -7,8 +7,9 @@
 
 import UIKit
 
-let highLightNews = [NewsSection(count: 3, color: UIColor.lightGray),
-                   NewsSection(count: 2, color: UIColor.darkGray)]
+let highLightNews = [NewsSection(name: "Animal", count: 3, color: UIColor.systemTeal),
+                   NewsSection(name: "Global warming", count: 2, color: UIColor.systemRed),
+                     NewsSection(name: "Finance", count: 3, color: UIColor.systemGreen)]
 
 
 class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -32,8 +33,9 @@ extension MainNewsVC  {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as UITableViewCell
-        cell.backgroundColor = highLightNews[indexPath.section].color
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
+        cell.typeBallon.tintColor = highLightNews[indexPath.section].color
+        cell.typeBallon.setTitle(highLightNews[indexPath.section].name, for: .normal)
         return cell
     }
     

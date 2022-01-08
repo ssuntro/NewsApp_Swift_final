@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 struct NewsSection {
+    let name: String
     let count: Int
     let color: UIColor
 }
