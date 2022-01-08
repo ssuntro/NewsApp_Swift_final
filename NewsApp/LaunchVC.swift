@@ -24,9 +24,21 @@ class LaunchVC: UIViewController {
         super.viewDidLoad()
         animateDinosaue()
         // 5 sec
-        //stop animate
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+            
+            print("Ann ja")
+            //present MainNewVC
+            let demoVC = UIViewController()
+            demoVC.view.backgroundColor = .red
+            demoVC.modalPresentationStyle = .pageSheet//.fullScreen
+            self.present(demoVC, animated: true, completion: nil)
+            
+        }
     }
 
+    deinit {
+        
+    }
     func animateDinosaue() {
         view.addSubview(dinosaurView)
         view.bringSubviewToFront(dinosaurView)
