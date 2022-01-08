@@ -21,6 +21,7 @@
 		BBDD1C3127899B490069748B /* dino.json in Resources */ = {isa = PBXBuildFile; fileRef = BBDD1C3027899B480069748B /* dino.json */; };
 		BBDD1C332789B1240069748B /* MainNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C322789B1240069748B /* MainNewsVC.swift */; };
 		BBDD1C352789C2800069748B /* DemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C342789C2800069748B /* DemoVC.swift */; };
+		BBDD1C372789CC700069748B /* NewsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C362789CC700069748B /* NewsSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		BBDD1C3027899B480069748B /* dino.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dino.json; sourceTree = "<group>"; };
 		BBDD1C322789B1240069748B /* MainNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsVC.swift; sourceTree = "<group>"; };
 		BBDD1C342789C2800069748B /* DemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoVC.swift; sourceTree = "<group>"; };
+		BBDD1C362789CC700069748B /* NewsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				BBDD1C3027899B480069748B /* dino.json */,
 				BBDD1BFB278991110069748B /* AppDelegate.swift */,
 				BBDD1BFD278991150069748B /* SceneDelegate.swift */,
+				BBDD1C362789CC700069748B /* NewsSection.swift */,
 				BBDD1C2E278998B30069748B /* LaunchVC.swift */,
 				BBDD1BFF278991150069748B /* ViewController.swift */,
 				BBDD1C342789C2800069748B /* DemoVC.swift */,
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDD1C372789CC700069748B /* NewsSection.swift in Sources */,
 				BBDD1C00278991150069748B /* ViewController.swift in Sources */,
 				BBDD1C2F278998B30069748B /* LaunchVC.swift in Sources */,
 				BBDD1C332789B1240069748B /* MainNewsVC.swift in Sources */,
