@@ -30,20 +30,34 @@ class LaunchVC: UIViewController {
             //present MainNewVC
             let demoVC = UIViewController()
             demoVC.view.backgroundColor = .red
-            demoVC.modalPresentationStyle = .pageSheet//.fullScreen
-            self.present(demoVC, animated: true, completion: nil)
+//            option#1
+//            demoVC.modalPresentationStyle = .fullScreen //.pageSheet or .fullScreen
+//            self?.present(demoVC, animated: true, completion: nil)
+            
+//            option#2
+            guard let window = self.view.window else {
+                return
+            }
+            window.rootViewController = demoVC
+            window.makeKeyAndVisible()
+            UIView.transition(with: window,
+                                  duration: 0.3,
+                                  options: .transitionCrossDissolve,
+                                  animations: nil,
+                                  completion: nil)
             
         }
     }
 
     deinit {
-        
+        print("LaunchVC deinit")
     }
     func animateDinosaue() {
         view.addSubview(dinosaurView)
         view.bringSubviewToFront(dinosaurView)
         dinosaurView.play()
     }
+    
     /*
     // MARK: - Navigation
 
