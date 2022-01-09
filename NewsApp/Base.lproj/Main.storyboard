@@ -57,7 +57,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-gO-PD3">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="28N-Ah-jXG">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animal" translatesAutoresizingMaskIntoConstraints="NO" id="28N-Ah-jXG">
                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="JdA-6m-ili"/>
@@ -88,7 +88,7 @@
                                                                 </stackView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0N-ml-etF" userLabel="spacer">
                                                                     <rect key="frame" x="0.0" y="90" width="309" height="10"/>
-                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </view>
                                                             </subviews>
                                                             <constraints>
@@ -108,7 +108,9 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <outlet property="typeBallon" destination="Slm-1Z-QoF" id="07h-Y9-s0y"/>
+                                            <outlet property="thumbnail" destination="28N-Ah-jXG" id="MEu-5G-Yke"/>
+                                            <outlet property="titleLabel" destination="ItR-qd-0jp" id="y5O-n7-IEe"/>
+                                            <outlet property="typeBadge" destination="Slm-1Z-QoF" id="yfa-F6-wXK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -164,7 +166,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dog" width="2121" height="1414"/>
+        <image name="animal" width="2121" height="1414"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
