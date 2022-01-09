@@ -50,7 +50,21 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-//MARK: - Table Rendering
+//MARK: - UITableViewDelegate
+extension MainNewsVC {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let nextVC = UIViewController()
+        nextVC.modalPresentationStyle = .pageSheet
+        nextVC.view.backgroundColor = .systemPink
+        self.present(nextVC, animated: true) {
+            print("DidSelect")
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+    
+}
+//MARK: - UITableViewDataSource
 extension MainNewsVC  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         news.count
@@ -68,7 +82,6 @@ extension MainNewsVC  {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-    
 }
 
 //MARK: - TableViewCellMovable
