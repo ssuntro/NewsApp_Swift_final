@@ -53,9 +53,9 @@ class LaunchVC: UIViewController {
     }
 
     deinit {
-
         print("LaunchVC deinit")
     }
+    
     func animateDinosaue() {
         view.addSubview(dinosaurView)
         view.bringSubviewToFront(dinosaurView)
