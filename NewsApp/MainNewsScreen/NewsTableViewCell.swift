@@ -8,7 +8,11 @@
 import UIKit
 
 class NewsTableViewCell: UITableViewCell {
-    @IBOutlet var typeBallon: UIButton!
+    @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var typeBadge: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

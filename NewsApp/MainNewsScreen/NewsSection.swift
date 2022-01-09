@@ -13,3 +13,4 @@ struct NewsSection {
     let count: Int
     let color: UIColor
 }
+
