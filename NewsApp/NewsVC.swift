@@ -18,4 +18,10 @@ class NewsVC: UIViewController {
         bodyTextView.text = news?.body
     }
     
+    @IBAction func forMoreDetailButtonDidClick(_ sender: Any) {
+//        let url = URL(string: urlSting.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!),
+        guard let url = news?.url, UIApplication.shared.canOpenURL(url) else { return }
+
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
 }
