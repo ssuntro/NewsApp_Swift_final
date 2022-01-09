@@ -44,6 +44,10 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBAction func reoderButtonDidClick(_ sender: Any) {
         tableView.isEditing = !tableView.isEditing
     }
+    
+    deinit {
+        print("MainNewsVC is deinited")
+    }
 }
 
 //MARK: - Table Rendering
