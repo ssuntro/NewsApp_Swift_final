@@ -20,10 +20,10 @@ import UIKit
 //    }
 //}
 
-let dataFromAPI = [News(title: "news1", status: .closed, category: .animal),
-            News(title: "news2", status: .responded, category: .globalWarming),
-            News(title: "news3", status: .pendingResponse, category: .globalWarming),
-            News(title: "news4", status: .closed, category: .finance)]
+let dataFromAPI = [News(title: "news1", body: "body1111", url: URL(string: "https://google.com")!, status: .closed, category: .animal),
+                   News(title: "news2", body: "body2222", url: URL(string: "https://google.com")!, status: .responded, category: .globalWarming),
+                   News(title: "news3", body: "body3", url: URL(string: "https://google.com")!, status: .pendingResponse, category: .globalWarming),
+                   News(title: "news4", body: "body444", url: URL(string: "https://google.com")!, status: .closed, category: .finance)]
 
 
 class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -54,7 +54,8 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 extension MainNewsVC {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let newsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewsVC") as! UIViewController
+        let newsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewsVC") as! NewsVC
+        newsVC.news = news[indexPath.row]
         newsVC.modalPresentationStyle = .pageSheet
         self.present(newsVC, animated: true) {
             print("DidSelect")

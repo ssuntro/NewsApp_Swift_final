@@ -8,6 +8,8 @@
 import Foundation
 struct News {
     let title: String
+    let body: String
+    let url: URL
     let status: NewsStatus
     let category: NewsCategory
 }

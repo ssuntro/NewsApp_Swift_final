@@ -82,12 +82,12 @@
                                                                     <rect key="frame" x="0.0" y="60" width="285" height="30"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slm-1Z-QoF">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="65.666666666666671" height="30"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="tinted" title="Status" cornerStyle="capsule"/>
                                                                         </button>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqS-2H-Md6" userLabel="spacer">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="285" height="30"/>
+                                                                            <rect key="frame" x="65.666666666666643" y="0.0" width="219.33333333333337" height="30"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </view>
                                                                     </subviews>
@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="988" y="131"/>
         </scene>
-        <!--View Controller-->
+        <!--NewsVC-->
         <scene sceneID="j8j-EV-gRO">
             <objects>
-                <viewController storyboardIdentifier="NewsVC" id="Abi-eH-w1c" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsVC" id="Abi-eH-w1c" customClass="NewsVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wJu-US-CWn">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,6 +193,10 @@
                             <constraint firstItem="toU-SU-E0t" firstAttribute="centerY" secondItem="IK6-xq-alW" secondAttribute="centerY" id="o0B-1t-gWV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bodyTextView" destination="FG1-2w-QMo" id="Nb2-Bc-JRV"/>
+                        <outlet property="titleLabel" destination="TWl-Wl-v3k" id="Gj7-EC-Nx9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKW-S3-9gZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,7 +205,6 @@
         <!--DemoVC-->
         <scene sceneID="JMT-1z-gh7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8ra-TG-WaF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="btk-Jm-O1x" customClass="DemoVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nBq-Iy-mga">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
@@ -222,6 +225,7 @@
                         <outlet property="nameLabel" destination="t5a-uv-exT" id="uXN-EH-d6L"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ra-TG-WaF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="987" y="-623"/>
         </scene>
