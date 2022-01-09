@@ -20,41 +20,88 @@ import UIKit
 //    }
 //}
 
-let data = [News(title: "news1", status: .closed, category: .animal),
+let dataFromAPI = [News(title: "news1", status: .closed, category: .animal),
             News(title: "news2", status: .responded, category: .globalWarming),
             News(title: "news3", status: .pendingResponse, category: .globalWarming),
             News(title: "news4", status: .closed, category: .finance)]
 
 
 class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var news = [News]()
     @IBOutlet weak var tableView: UITableView!
-    var task: URLSessionDataTask?
-    
+//    var task: URLSessionDataTask?
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        
-        
+        news = dataFromAPI
+    }
+    
+    @IBAction func refreshButtonDidClick(_ sender: Any) {
+        news = dataFromAPI
+        tableView.reloadData()
+    }
+    @IBAction func reoderButtonDidClick(_ sender: Any) {
+        tableView.isEditing = !tableView.isEditing
     }
 }
 
-//MARK: - UITableViewDataSource
+//MARK: - Table Rendering
 extension MainNewsVC  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data.count
+        news.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
-        cell.titleLabel.text = data[indexPath.row].title
-        cell.typeBadge.tintColor = data[indexPath.row].status.color
-        cell.typeBadge.setTitle(data[indexPath.row].status.rawValue, for: .normal)
-        cell.thumbnail.image = UIImage(named: data[indexPath.row].category.imageName)
+        cell.titleLabel.text = news[indexPath.row].title
+        cell.typeBadge.tintColor = news[indexPath.row].status.color
+        cell.typeBadge.setTitle(news[indexPath.row].status.rawValue, for: .normal)
+        cell.thumbnail.image = UIImage(named: news[indexPath.row].category.imageName)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+}
+
+//MARK: - TableViewCellMovable
+extension MainNewsVC  {
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//        let tmp = news[sourceIndexPath.row]
+//        news[sourceIndexPath.row] = news[destinationIndexPath.row]
+//        news[destinationIndexPath.row] = tmp
+        
+        
+//        news.swapAt(sourceIndexPath.row, destinationIndexPath.row)
+        
+        
+        let elem = news.remove(at: sourceIndexPath.row)
+        news.insert(elem, at: destinationIndexPath.row)
+    }
+}
+
+//MARK: - TableViewCellRemovable
+extension MainNewsVC  {
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
+//    {
+//        if editingStyle == .delete {
+//            news.remove(at: indexPath.row)
+//            tableView.reloadData()
+//        }
+//    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        .none
+    }
+    
+    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        false
+    }
+    
 }
