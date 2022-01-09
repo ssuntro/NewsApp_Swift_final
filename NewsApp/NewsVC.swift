@@ -25,7 +25,14 @@ class NewsVC: UIViewController {
 //        jumpToStore()
     }
     
-    
+    @IBAction func removeButtonDidClick(_ sender: Any) {
+        self.dismiss(animated: true) {
+            print("removeButtonDidClick")
+        }
+    }
+    deinit {
+        print("NewsVC is deinited.")
+    }
 }
 
 //MARK: - URL functionality
