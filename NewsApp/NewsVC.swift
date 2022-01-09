@@ -19,9 +19,29 @@ class NewsVC: UIViewController {
     }
     
     @IBAction func forMoreDetailButtonDidClick(_ sender: Any) {
-//        let url = URL(string: urlSting.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!),
-        guard let url = news?.url, UIApplication.shared.canOpenURL(url) else { return }
 
+        openBrowser()
+//        jumpToInstagram()
+//        jumpToStore()
+    }
+    
+    func openBrowser() {
+ //       let url = URL(string: urlSting.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)
+        
+        guard let url = news?.url, UIApplication.shared.canOpenURL(url) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
+    
+//    func jumpToInstagram() {
+//        let appURL = URL(string: "instagram://user?username=tastyjapan")!
+//        if UIApplication.shared.canOpenURL(appURL) {
+//            UIApplication.shared.open(appURL)
+//        }
+//    }
+    
+//    func jumpToStore() {
+//        if let url = URL(string: "itms-apps://apple.com/app/id389801252") {
+//            UIApplication.shared.open(url)
+//        }
+//    }
 }
