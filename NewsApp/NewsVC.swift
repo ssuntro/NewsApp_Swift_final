@@ -25,6 +25,11 @@ class NewsVC: UIViewController {
 //        jumpToStore()
     }
     
+    
+}
+
+//MARK: - URL functionality
+extension NewsVC {
     func openBrowser() {
  //       let url = URL(string: urlSting.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)
         
