@@ -157,9 +157,6 @@
 			children = (
 				BBDD1C322789B1240069748B /* MainNewsVC.swift */,
 				BBDD1C382789D73B0069748B /* NewsTableViewCell.swift */,
-				BBDD1C3F278AA75D0069748B /* NewsStatus.swift */,
-				BBDD1C3D278AA3190069748B /* NewsCategory.swift */,
-				BBDD1C3B278A9FCD0069748B /* News.swift */,
 				BBDD1C362789CC700069748B /* NewsSection.swift */,
 			);
 			path = MainNewsScreen;
@@ -168,6 +165,9 @@
 		BBDD1C43278B24510069748B /* Data model */ = {
 			isa = PBXGroup;
 			children = (
+				BBDD1C3F278AA75D0069748B /* NewsStatus.swift */,
+				BBDD1C3D278AA3190069748B /* NewsCategory.swift */,
+				BBDD1C3B278A9FCD0069748B /* News.swift */,
 			);
 			path = "Data model";
 			sourceTree = "<group>";
