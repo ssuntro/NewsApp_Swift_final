@@ -54,10 +54,9 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 extension MainNewsVC {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let nextVC = UIViewController()
-        nextVC.modalPresentationStyle = .pageSheet
-        nextVC.view.backgroundColor = .systemPink
-        self.present(nextVC, animated: true) {
+        let newsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewsVC") as! UIViewController
+        newsVC.modalPresentationStyle = .pageSheet
+        self.present(newsVC, animated: true) {
             print("DidSelect")
             tableView.deselectRow(at: indexPath, animated: true)
         }
