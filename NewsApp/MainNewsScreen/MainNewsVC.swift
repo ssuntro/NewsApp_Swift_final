@@ -120,5 +120,16 @@ extension MainNewsVC  {
     func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
         false
     }
-    
+}
+
+//MARK: - Segue example
+extension MainNewsVC  {
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "MySegueId" {
+//            if let nextViewController = segue.destination as? NextViewController {
+//                    nextViewController.valueOfxyz = "XYZ" //Or pass any values
+//                    nextViewController.valueOf123 = 123
+//            }
+//        }
+//    }
 }
