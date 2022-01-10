@@ -22,7 +22,7 @@ class LaunchVC: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        animateDinosaue()
+        animateDinosaur()
         // 5 sec
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
             
@@ -56,7 +56,7 @@ class LaunchVC: UIViewController {
         print("LaunchVC deinit")
     }
     
-    func animateDinosaue() {
+    func animateDinosaur() {
         view.addSubview(dinosaurView)
         view.bringSubviewToFront(dinosaurView)
         dinosaurView.play()
