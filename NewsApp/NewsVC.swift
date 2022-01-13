@@ -6,11 +6,15 @@
 //
 
 import UIKit
+protocol NewsVCDelegate: class {
+    func newVCRemoveButtonDidClick(_ vc: NewsVC)
+}
 
 class NewsVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyTextView: UITextView!
     var news: News?
+    weak var delegate: NewsVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,7 @@ class NewsVC: UIViewController {
     @IBAction func removeButtonDidClick(_ sender: Any) {
         self.dismiss(animated: true) {
             print("removeButtonDidClick")
+//            self.delegate?.newVCRemoveButtonDidClick(self)
         }
     }
     deinit {

@@ -25,7 +25,14 @@ let dataFromAPI = [News(title: "news1", body: "body1111", url: URL(string: "http
                    News(title: "news3", body: "body3", url: URL(string: "https://google.com")!, status: .pendingResponse, category: .globalWarming),
                    News(title: "news4", body: "body444", url: URL(string: "https://www.google.com/search?q=dog&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjV3vG4_qT1AhWaTGwGHVdODRkQ_AUoAXoECAIQAw&biw=1920&bih=919&dpr=1#imgrc=btQ8-aZ4x2YyMM")!, status: .closed, category: .finance)]
 
-
+extension MainNewsVC: NewsVCDelegate {
+    func newVCRemoveButtonDidClick(_ vc: NewsVC) { //why needs to send self or vc?
+        if let index = news.firstIndex(where: { $0.title == vc.news?.title }) {
+            news.remove(at: index)
+            tableView.reloadData()
+        }
+    }
+}
 class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var news = [News]()
     @IBOutlet weak var tableView: UITableView!
@@ -56,6 +63,7 @@ extension MainNewsVC {
         
         let newsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewsVC") as! NewsVC
         newsVC.news = news[indexPath.row]
+//        newsVC.delegate = self
         newsVC.modalPresentationStyle = .pageSheet
         self.present(newsVC, animated: true) {
             print("DidSelect")
