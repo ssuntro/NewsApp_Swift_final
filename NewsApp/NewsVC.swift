@@ -13,7 +13,7 @@ protocol NewsVCDelegate: class {
 class NewsVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyTextView: UITextView!
-    var news: News?
+    var news: News!
     weak var delegate: NewsVCDelegate?
     
     override func viewDidLoad() {
