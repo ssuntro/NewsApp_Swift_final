@@ -64,6 +64,12 @@ extension MainNewsVC {
         let newsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewsVC") as! NewsVC
         newsVC.news = news[indexPath.row]
 //        newsVC.delegate = self
+        newsVC.onRemovedButtonDidClick = {[weak self] (selectedNews:News) -> () in //why weak self? and it is use same technique as self.present(...)
+            if let index = self?.news.firstIndex(where: { $0.title == selectedNews.title }) {
+                self?.news.remove(at: index)
+                tableView.reloadData()
+            }
+        }
         newsVC.modalPresentationStyle = .pageSheet
         self.present(newsVC, animated: true) {
             print("DidSelect")
