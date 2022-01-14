@@ -27,6 +27,7 @@
 		BBDD1C40278AA75D0069748B /* NewsStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C3F278AA75D0069748B /* NewsStatus.swift */; };
 		BBDD1C42278B24230069748B /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C41278B24230069748B /* NewsVC.swift */; };
 		BBFE53CF279134F9006D05B3 /* NewsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE53CE279134F9006D05B3 /* NewsFetcher.swift */; };
+		BBFE53D127915A9F006D05B3 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBFE53D027915A9F006D05B3 /* LoadingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		BBDD1C3F278AA75D0069748B /* NewsStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsStatus.swift; sourceTree = "<group>"; };
 		BBDD1C41278B24230069748B /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		BBFE53CE279134F9006D05B3 /* NewsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFetcher.swift; sourceTree = "<group>"; };
+		BBFE53D027915A9F006D05B3 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				BBDD1C2E278998B30069748B /* LaunchVC.swift */,
 				BBDD1C41278B24230069748B /* NewsVC.swift */,
 				BBFE53CE279134F9006D05B3 /* NewsFetcher.swift */,
+				BBFE53D027915A9F006D05B3 /* LoadingView.xib */,
 				BBDD1C342789C2800069748B /* DemoVC.swift */,
 				BBDD1C43278B24510069748B /* Data model */,
 				BBDD1C3A278A9F970069748B /* MainNewsScreen */,
@@ -289,6 +292,7 @@
 				BBDD1C05278991180069748B /* Assets.xcassets in Resources */,
 				BBDD1C03278991150069748B /* Main.storyboard in Resources */,
 				BBDD1C3127899B490069748B /* dino.json in Resources */,
+				BBFE53D127915A9F006D05B3 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

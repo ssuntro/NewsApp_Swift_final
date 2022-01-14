@@ -22,8 +22,16 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             tableView.reloadData()
         }
     }
+    lazy var loadingView: UIView  = {
+        let view = UINib(nibName: "LoadingView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+        view.backgroundColor = .clear
+        view.center = self.view.center
+        return view
+    }()
+    
     @IBOutlet weak var tableView: UITableView!
     var fetcher = NewsFetcher()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -33,9 +41,12 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func fetchData() {
+        view.addSubview(loadingView)
+        view.bringSubviewToFront(loadingView)
         fetcher.exe { [weak self] result in
             print("fetchData completed.")
             self?.news = result
+            self?.loadingView.removeFromSuperview()
         }
     }
     
