@@ -7,46 +7,41 @@
 
 import UIKit
 
-//title, url, body, createdDate
-//extension MainNewsVC {
-//    func fetchNewsFromAPI() {
-//        task = URLSession.shared.dataTask(with: URL(string: "https://petitions.whitehouse.gov/petition/president-trump-needs-remove-and-replace-current-united-states-attorney-general-jeff-sessions")!) { data, response, error in
-//            if let data = data,
-//               let image = UIImage(data: data) {
-//                print("Image!!")
-//            }
-//        }
-//        task?.resume()
-//    }
-//}
-
-let dataFromAPI = [News(title: "news1", body: "body1111", url: URL(string: "https://google.com")!, status: .closed, category: .animal),
-                   News(title: "news2", body: "body2222", url: URL(string: "https://google.com")!, status: .responded, category: .globalWarming),
-                   News(title: "news3", body: "body3", url: URL(string: "https://google.com")!, status: .pendingResponse, category: .globalWarming),
-                   News(title: "news4", body: "body444", url: URL(string: "https://www.google.com/search?q=dog&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjV3vG4_qT1AhWaTGwGHVdODRkQ_AUoAXoECAIQAw&biw=1920&bih=919&dpr=1#imgrc=btQ8-aZ4x2YyMM")!, status: .closed, category: .finance)]
 
 extension MainNewsVC: NewsVCDelegate {
     func newVCRemoveButtonDidClick(_ vc: NewsVC) { //why needs to send self or vc?
-        if let index = news.firstIndex(where: { $0.title == vc.news?.title }) {
+        if let index = news.firstIndex(where: { $0.detail.title == vc.news?.detail.title }) {
             news.remove(at: index)
             tableView.reloadData()
         }
     }
 }
 class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var news = [News]()
+    var news = [News]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     @IBOutlet weak var tableView: UITableView!
-//    var task: URLSessionDataTask?
+    var fetcher = NewsFetcher()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        news = dataFromAPI
+//        news = dataFromAPI
+        fetchData()
+    }
+    
+    func fetchData() {
+        fetcher.exe { [weak self] result in
+            print("fetchData completed.")
+            self?.news = result
+        }
     }
     
     @IBAction func refreshButtonDidClick(_ sender: Any) {
-        news = dataFromAPI
-        tableView.reloadData()
+//        news = dataFromAPI
+        fetchData()
     }
     @IBAction func reoderButtonDidClick(_ sender: Any) {
         tableView.isEditing = !tableView.isEditing
@@ -65,7 +60,7 @@ extension MainNewsVC {
         newsVC.news = news[indexPath.row]
 //        newsVC.delegate = self
         newsVC.onRemovedButtonDidClick = {[weak self] (selectedNews:News) -> () in //why weak self? and it is use same technique as self.present(...)
-            if let index = self?.news.firstIndex(where: { $0.title == selectedNews.title }) {
+            if let index = self?.news.firstIndex(where: { $0.detail.title == selectedNews.detail.title }) {
                 self?.news.remove(at: index)
                 tableView.reloadData()
             }
@@ -86,9 +81,9 @@ extension MainNewsVC  {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
-        cell.titleLabel.text = news[indexPath.row].title
-        cell.typeBadge.tintColor = news[indexPath.row].status.color
-        cell.typeBadge.setTitle(news[indexPath.row].status.rawValue, for: .normal)
+        cell.titleLabel.text = news[indexPath.row].detail.title
+        cell.typeBadge.tintColor = news[indexPath.row].detail.status.color
+        cell.typeBadge.setTitle(news[indexPath.row].detail.status.rawValue, for: .normal)
         cell.thumbnail.image = UIImage(named: news[indexPath.row].category.imageName)
         return cell
     }

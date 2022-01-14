@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NewsCategory: String {
+enum NewsCategory: String, Codable {
     case animal
     case globalWarming
     case finance

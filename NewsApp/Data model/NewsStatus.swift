@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum NewsStatus: String {
+enum NewsStatus: String, Codable {
     case closed
     case responded
     case pendingResponse = "pending response"

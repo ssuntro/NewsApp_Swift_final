@@ -19,8 +19,8 @@ class NewsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = news?.title
-        bodyTextView.text = news?.body
+        titleLabel.text = news?.detail.title
+        bodyTextView.text = news?.detail.body
     }
     
     @IBAction func forMoreDetailButtonDidClick(_ sender: Any) {
@@ -51,7 +51,7 @@ extension NewsVC {
     func openBrowser() {
  //       let url = URL(string: urlSting.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)
         
-        guard let url = news?.url, UIApplication.shared.canOpenURL(url) else { return }
+        guard let url = news?.detail.url, UIApplication.shared.canOpenURL(url) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     

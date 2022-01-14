@@ -7,9 +7,13 @@
 
 import Foundation
 struct News {
+    let detail: NewsDetail
+    let category: NewsCategory
+}
+
+struct NewsDetail: Codable {
     let title: String
     let body: String
     let url: URL
     let status: NewsStatus
-    let category: NewsCategory
 }

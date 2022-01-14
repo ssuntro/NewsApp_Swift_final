@@ -26,7 +26,7 @@
 		BBDD1C3E278AA3190069748B /* NewsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C3D278AA3190069748B /* NewsCategory.swift */; };
 		BBDD1C40278AA75D0069748B /* NewsStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C3F278AA75D0069748B /* NewsStatus.swift */; };
 		BBDD1C42278B24230069748B /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C41278B24230069748B /* NewsVC.swift */; };
-		BBFE53CF279134F9006D05B3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE53CE279134F9006D05B3 /* Network.swift */; };
+		BBFE53CF279134F9006D05B3 /* NewsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE53CE279134F9006D05B3 /* NewsFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,7 @@
 		BBDD1C3D278AA3190069748B /* NewsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCategory.swift; sourceTree = "<group>"; };
 		BBDD1C3F278AA75D0069748B /* NewsStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsStatus.swift; sourceTree = "<group>"; };
 		BBDD1C41278B24230069748B /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
-		BBFE53CE279134F9006D05B3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		BBFE53CE279134F9006D05B3 /* NewsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 				BBDD1BFD278991150069748B /* SceneDelegate.swift */,
 				BBDD1C2E278998B30069748B /* LaunchVC.swift */,
 				BBDD1C41278B24230069748B /* NewsVC.swift */,
-				BBFE53CE279134F9006D05B3 /* Network.swift */,
+				BBFE53CE279134F9006D05B3 /* NewsFetcher.swift */,
 				BBDD1C342789C2800069748B /* DemoVC.swift */,
 				BBDD1C43278B24510069748B /* Data model */,
 				BBDD1C3A278A9F970069748B /* MainNewsScreen */,
@@ -315,7 +315,7 @@
 			files = (
 				BBDD1C40278AA75D0069748B /* NewsStatus.swift in Sources */,
 				BBDD1C372789CC700069748B /* NewsSection.swift in Sources */,
-				BBFE53CF279134F9006D05B3 /* Network.swift in Sources */,
+				BBFE53CF279134F9006D05B3 /* NewsFetcher.swift in Sources */,
 				BBDD1C392789D73B0069748B /* NewsTableViewCell.swift in Sources */,
 				BBDD1C3E278AA3190069748B /* NewsCategory.swift in Sources */,
 				BBDD1C3C278A9FCD0069748B /* News.swift in Sources */,
