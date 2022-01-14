@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var thumbnail: UIImageView!
@@ -15,7 +16,15 @@ class NewsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+//        makeCircleBorder()
+        
+    }
+    
+    func makeCircleBorder() {
+        let imageLayer: CALayer? = thumbnail.layer
+        imageLayer?.cornerRadius = thumbnail.frame.size.width/2
+        imageLayer?.borderWidth = 1
+        imageLayer?.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
