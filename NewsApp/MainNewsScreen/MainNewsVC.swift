@@ -36,10 +36,13 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(fetchData), for: UIControl.Event.valueChanged)
+        tableView.refreshControl = refreshControl
         fetchData()
     }
     
-    func fetchData() {
+    @objc func fetchData() {
         view.addSubview(loadingView)
         view.bringSubviewToFront(loadingView)
         
@@ -47,6 +50,8 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             print("fetchData completed.")
             self?.news = result
             self?.loadingView.removeFromSuperview()
+            self?.tableView.refreshControl?.endRefreshing()
+
         }
         
         
