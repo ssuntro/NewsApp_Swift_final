@@ -17,7 +17,6 @@ let mockAPIResponse = [News(detail: NewsDetail(title: "news1", body: "body1111",
 struct NewsFetcher {
     var task: URLSessionDataTask? //why we need task?
 
-
     mutating func exe(completion: @escaping ([News]) -> Void) { //Why cannot be func exe() -> [News] {}?
         task?.cancel()
         let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-2.json")!
@@ -27,7 +26,7 @@ struct NewsFetcher {
                   response.statusCode == 200,
                   let data = data,
                   let dict = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                  let xx = dict["results"] as? [[String: Any]] else {
+                  let rawNews = dict["results"] as? [[String: Any]] else {
 //                      return [News]()
                       DispatchQueue.main.async {
                           completion([News]())
@@ -35,32 +34,49 @@ struct NewsFetcher {
                       return
                   }
             
-            let animals = xx[0...3].compactMap { elem -> News? in
-                if let data = try? JSONSerialization.data(withJSONObject: elem, options: []),
-                   let rr = try? JSONDecoder().decode(NewsDetail.self, from: data) {
-                    return News(detail: rr, category: .animal)
-                }
-                return nil
-            }
+//            let animals = result[0...3].compactMap { elem -> News? in
+//                if let data = try? JSONSerialization.data(withJSONObject: elem, options: []),
+//                   let detail = try? JSONDecoder().decode(NewsDetail.self, from: data) {
+//                    return News(detail: detail, category: .animal)
+//                }
+//                return nil
+//            }
+//
+//            let finance = result[4...6].compactMap { elem -> News? in
+//                if let data = try? JSONSerialization.data(withJSONObject: elem, options: []),
+//                   let detail = try? JSONDecoder().decode(NewsDetail.self, from: data) {
+//                    return News(detail: detail, category: .finance)
+//                }
+//                return nil
+//            }
+//
+//            let globalWarming = result[7...15].compactMap { elem -> News? in
+//                if let data = try? JSONSerialization.data(withJSONObject: elem, options: []),
+//                   let detail = try? JSONDecoder().decode(NewsDetail.self, from: data) {
+//                    return News(detail: detail, category: .globalWarming)
+//                }
+//                return nil
+//            }
             
-            let finance = xx[4...6].compactMap { elem -> News? in
-                if let data = try? JSONSerialization.data(withJSONObject: elem, options: []),
-                   let rr = try? JSONDecoder().decode(NewsDetail.self, from: data) {
-                    return News(detail: rr, category: .finance)
+//MARK: - Using Monad
+            let result = [
+                rawNews[0...3],
+                rawNews[4...6],
+                rawNews[7...15]].map { list in
+                list.compactMap { elem -> News? in
+                    if let data = try? JSONSerialization.data(withJSONObject: elem, options: []),
+                       let detail = try? JSONDecoder().decode(NewsDetail.self, from: data) {
+                        return News(detail: detail, category: .animal)
+                    }
+                    return nil
                 }
-                return nil
-            }
-            
-            let globalWarming = xx[7...15].compactMap { elem -> News? in
-                if let data = try? JSONSerialization.data(withJSONObject: elem, options: []),
-                   let rr = try? JSONDecoder().decode(NewsDetail.self, from: data) {
-                    return News(detail: rr, category: .globalWarming)
-                }
-                return nil
+            }.reduce([News]()) { partialResult, elem in
+                partialResult + elem
             }
             
             DispatchQueue.main.async {
-                completion(animals + finance + globalWarming)
+//                completion(animals + finance + globalWarming)
+                completion(result)
             }
         }
         task?.resume()
