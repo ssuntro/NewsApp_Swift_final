@@ -52,8 +52,8 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
 //        Task { [weak self] in
 //            //main.async thread always
-//            let xxx = await NewsFetcherAwait().task.result
-//            switch(xxx) {
+//            let result = await NewsFetcherAwait().task.result
+//            switch(result) {
 //            case .success(let data):
 //                print("fetchData completed.")
 //                self?.news = data
