@@ -6,16 +6,6 @@
 //
 
 import Foundation
-//    [tmr can complete this]
-//    -> Fetch data from API.Await
-//    -> Pull to refresh
-//    -> Festive App Icon(reorder needed)
-//    -> [SwiftUI] Layout Login screen
-//    -> #9 Its functionality
-//    -> select profile image from camera and Gallery -> pause
-    
-//    there is urgent requiment for new app which is ChatApp
-//    [Sunday] ChatApp + FirebaseAuth + other in app data then mock
 
 struct NewsFetcherAwait {
 //    var task: Task<[News], Error>?
