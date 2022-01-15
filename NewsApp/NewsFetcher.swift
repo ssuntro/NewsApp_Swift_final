@@ -7,7 +7,8 @@
 
 import Foundation
 
-//let dataFromAPI = [News(title: "news1", body: "body1111", url: URL(string: "https://google.com")!, status: .closed, category: .animal),
+let mockAPIResponse = [News(detail: NewsDetail(title: "news1", body: "body1111", url: URL(string: "https://google.com")!, status: .closed),
+                            category: .animal)]
 //                   News(title: "news2", body: "body2222", url: URL(string: "https://google.com")!, status: .responded, category: .globalWarming),
 //                   News(title: "news3", body: "body3", url: URL(string: "https://google.com")!, status: .pendingResponse, category: .globalWarming),
 //                   News(title: "news4", body: "body444", url: URL(string: "https://www.google.com/search?q=dog&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjV3vG4_qT1AhWaTGwGHVdODRkQ_AUoAXoECAIQAw&biw=1920&bih=919&dpr=1#imgrc=btQ8-aZ4x2YyMM")!, status: .closed, category: .finance)]
@@ -29,7 +30,7 @@ import Foundation
  
 struct NewsFetcher {
     var task: URLSessionDataTask? //why we need task?
-    
+
 
     mutating func exe(completion: @escaping ([News]) -> Void) { //Why cannot be func exe() -> [News] {}?
         task?.cancel()

@@ -36,22 +36,34 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-//        news = dataFromAPI
         fetchData()
     }
     
     func fetchData() {
         view.addSubview(loadingView)
         view.bringSubviewToFront(loadingView)
-        fetcher.exe { [weak self] result in
-            print("fetchData completed.")
-            self?.news = result
+//        fetcher.exe { [weak self] result in
+//            print("fetchData completed.")
+//            self?.news = result
+//            self?.loadingView.removeFromSuperview()
+//        }
+        
+        
+        Task { [weak self] in
+            //main.async thread always
+            let xxx = await NewsFetcherAwait().task.result
+            switch(xxx) {
+            case .success(let data):
+                print("fetchData completed.")
+                self?.news = data
+            case .failure(_):
+                print("error")
+            }
             self?.loadingView.removeFromSuperview()
         }
     }
     
     @IBAction func refreshButtonDidClick(_ sender: Any) {
-//        news = dataFromAPI
         fetchData()
     }
     @IBAction func reoderButtonDidClick(_ sender: Any) {
