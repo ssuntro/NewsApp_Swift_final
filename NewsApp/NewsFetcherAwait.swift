@@ -8,7 +8,6 @@
 import Foundation
 
 struct NewsFetcherAwait {
-//    var task: Task<[News], Error>?
     let task: Task<[News], Error> =  {
         return Task { () -> [News] in
             let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-2.json")!
@@ -21,11 +20,4 @@ struct NewsFetcherAwait {
             return mockAPIResponse
         }
     }()
-//    mutating func exe() async -> Result<[News], Error>? {
-//        task?.cancel()
-//        task = template
-//        let result = await task?.result
-//        print("exe complete")
-//        return result
-//    }
 }

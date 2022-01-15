@@ -13,20 +13,6 @@ let mockAPIResponse = [News(detail: NewsDetail(title: "news1", body: "body1111",
 //                   News(title: "news3", body: "body3", url: URL(string: "https://google.com")!, status: .pendingResponse, category: .globalWarming),
 //                   News(title: "news4", body: "body444", url: URL(string: "https://www.google.com/search?q=dog&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjV3vG4_qT1AhWaTGwGHVdODRkQ_AUoAXoECAIQAw&biw=1920&bih=919&dpr=1#imgrc=btQ8-aZ4x2YyMM")!, status: .closed, category: .finance)]
 
-
-//title, url, body, createdDate
-//extension MainNewsVC {
-//    func fetchNewsFromAPI() {
-//        task = URLSession.shared.dataTask(with: URL(string: "https://petitions.whitehouse.gov/petition/president-trump-needs-remove-and-replace-current-united-states-attorney-general-jeff-sessions")!) { data, response, error in
-//            if let data = data,
-//               let image = UIImage(data: data) {
-//                print("Image!!")
-//            }
-//        }
-//        task?.resume()
-//    }
-//}
-
  
 struct NewsFetcher {
     var task: URLSessionDataTask? //why we need task?
@@ -48,16 +34,6 @@ struct NewsFetcher {
                       }
                       return
                   }
-//            let yy = xx.prefix(10)
-//
-//            let dd = yy.compactMap { elem -> News? in
-//                if let data = try? JSONSerialization.data(withJSONObject: elem, options: []),
-//                   let rr = try? JSONDecoder().decode(News.self, from: data) {
-//                    //assign newsCategory
-//                    return rr
-//                }
-//                return nil
-//            }
             
             let animals = xx[0...3].compactMap { elem -> News? in
                 if let data = try? JSONSerialization.data(withJSONObject: elem, options: []),
@@ -86,10 +62,6 @@ struct NewsFetcher {
             DispatchQueue.main.async {
                 completion(animals + finance + globalWarming)
             }
-            
-//            let jsonData = try JSONDecoder().decode([News.self], from: data)
-            
-            
         }
         task?.resume()
     }
