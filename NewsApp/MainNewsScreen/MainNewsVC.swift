@@ -31,6 +31,7 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var fetcher = NewsFetcher()
+    var appIconManager = AppIconManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +52,6 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             self?.news = result
             self?.loadingView.removeFromSuperview()
             self?.tableView.refreshControl?.endRefreshing()
-
         }
         
         
@@ -99,6 +99,8 @@ extension MainNewsVC {
             print("DidSelect")
             tableView.deselectRow(at: indexPath, animated: true)
         }
+        
+        appIconManager.setIcon(from: indexPath.row)
     }
     
 }
