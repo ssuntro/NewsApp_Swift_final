@@ -29,6 +29,11 @@
 		BBFE53CF279134F9006D05B3 /* NewsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE53CE279134F9006D05B3 /* NewsFetcher.swift */; };
 		BBFE53D127915A9F006D05B3 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBFE53D027915A9F006D05B3 /* LoadingView.xib */; };
 		BBFE53D32792AC90006D05B3 /* NewsFetcherAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE53D22792AC90006D05B3 /* NewsFetcherAwait.swift */; };
+		BBFE53DA2793DDFE006D05B3 /* AppIconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE53D92793DDFE006D05B3 /* AppIconManager.swift */; };
+		BBFE53ED2793E9E6006D05B3 /* cake@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBFE53EB2793E9E6006D05B3 /* cake@3x.png */; };
+		BBFE53F32793EBFB006D05B3 /* eye@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBFE53F12793EBFB006D05B3 /* eye@3x.png */; };
+		BBFE53F42793EBFB006D05B3 /* eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBFE53F22793EBFB006D05B3 /* eye@2x.png */; };
+		BBFE53F62793ECB2006D05B3 /* cake@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBFE53F52793ECB2006D05B3 /* cake@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +79,11 @@
 		BBFE53CE279134F9006D05B3 /* NewsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFetcher.swift; sourceTree = "<group>"; };
 		BBFE53D027915A9F006D05B3 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		BBFE53D22792AC90006D05B3 /* NewsFetcherAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFetcherAwait.swift; sourceTree = "<group>"; };
+		BBFE53D92793DDFE006D05B3 /* AppIconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconManager.swift; sourceTree = "<group>"; };
+		BBFE53EB2793E9E6006D05B3 /* cake@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cake@3x.png"; sourceTree = "<group>"; };
+		BBFE53F12793EBFB006D05B3 /* eye@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eye@3x.png"; sourceTree = "<group>"; };
+		BBFE53F22793EBFB006D05B3 /* eye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eye@2x.png"; sourceTree = "<group>"; };
+		BBFE53F52793ECB2006D05B3 /* cake@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cake@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,7 @@
 		BBDD1BFA278991100069748B /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				BBFE53D42793DC1B006D05B3 /* App Icons */,
 				BBDD1C3027899B480069748B /* dino.json */,
 				BBDD1BFB278991110069748B /* AppDelegate.swift */,
 				BBDD1BFD278991150069748B /* SceneDelegate.swift */,
@@ -179,6 +190,18 @@
 				BBDD1C3B278A9FCD0069748B /* News.swift */,
 			);
 			path = "Data model";
+			sourceTree = "<group>";
+		};
+		BBFE53D42793DC1B006D05B3 /* App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				BBFE53F52793ECB2006D05B3 /* cake@2x.png */,
+				BBFE53F22793EBFB006D05B3 /* eye@2x.png */,
+				BBFE53F12793EBFB006D05B3 /* eye@3x.png */,
+				BBFE53EB2793E9E6006D05B3 /* cake@3x.png */,
+				BBFE53D92793DDFE006D05B3 /* AppIconManager.swift */,
+			);
+			path = "App Icons";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,9 +316,13 @@
 			files = (
 				BBDD1C08278991180069748B /* LaunchScreen.storyboard in Resources */,
 				BBDD1C05278991180069748B /* Assets.xcassets in Resources */,
+				BBFE53F32793EBFB006D05B3 /* eye@3x.png in Resources */,
 				BBDD1C03278991150069748B /* Main.storyboard in Resources */,
 				BBDD1C3127899B490069748B /* dino.json in Resources */,
+				BBFE53F42793EBFB006D05B3 /* eye@2x.png in Resources */,
 				BBFE53D127915A9F006D05B3 /* LoadingView.xib in Resources */,
+				BBFE53F62793ECB2006D05B3 /* cake@2x.png in Resources */,
+				BBFE53ED2793E9E6006D05B3 /* cake@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +355,7 @@
 				BBFE53D32792AC90006D05B3 /* NewsFetcherAwait.swift in Sources */,
 				BBDD1C3C278A9FCD0069748B /* News.swift in Sources */,
 				BBDD1C42278B24230069748B /* NewsVC.swift in Sources */,
+				BBFE53DA2793DDFE006D05B3 /* AppIconManager.swift in Sources */,
 				BBDD1C2F278998B30069748B /* LaunchVC.swift in Sources */,
 				BBDD1C332789B1240069748B /* MainNewsVC.swift in Sources */,
 				BBDD1BFC278991110069748B /* AppDelegate.swift in Sources */,
