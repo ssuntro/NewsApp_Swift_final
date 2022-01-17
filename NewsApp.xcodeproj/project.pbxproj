@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB4DD26B2795B49000203A17 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4DD26A2795B49000203A17 /* LoginView.swift */; };
 		BBDD1BFC278991110069748B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1BFB278991110069748B /* AppDelegate.swift */; };
 		BBDD1BFE278991150069748B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1BFD278991150069748B /* SceneDelegate.swift */; };
 		BBDD1C03278991150069748B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDD1C01278991150069748B /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB4DD26A2795B49000203A17 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BBDD1BF8278991100069748B /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDD1BFB278991110069748B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBDD1BFD278991150069748B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				BBFE53D42793DC1B006D05B3 /* App Icons */,
 				BBDD1C3027899B480069748B /* dino.json */,
+				BB4DD26A2795B49000203A17 /* LoginView.swift */,
 				BBDD1BFB278991110069748B /* AppDelegate.swift */,
 				BBDD1BFD278991150069748B /* SceneDelegate.swift */,
 				BBDD1C2E278998B30069748B /* LaunchVC.swift */,
@@ -350,6 +353,7 @@
 				BBDD1C40278AA75D0069748B /* NewsStatus.swift in Sources */,
 				BBDD1C372789CC700069748B /* NewsSection.swift in Sources */,
 				BBFE53CF279134F9006D05B3 /* NewsFetcher.swift in Sources */,
+				BB4DD26B2795B49000203A17 /* LoginView.swift in Sources */,
 				BBDD1C392789D73B0069748B /* NewsTableViewCell.swift in Sources */,
 				BBDD1C3E278AA3190069748B /* NewsCategory.swift in Sources */,
 				BBFE53D32792AC90006D05B3 /* NewsFetcherAwait.swift in Sources */,

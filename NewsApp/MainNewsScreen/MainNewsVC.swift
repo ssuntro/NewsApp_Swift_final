@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SwiftUI
 
 extension MainNewsVC: NewsVCDelegate {
     func newVCRemoveButtonDidClick(_ vc: NewsVC) { //why needs to send self or vc?
@@ -76,6 +76,10 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.isEditing = !tableView.isEditing
     }
     
+    @IBAction func loginButtonDidClick(_ sender: Any) {
+        let vc = UIHostingController(rootView: LoginView())
+        self.present(vc, animated: true, completion: nil)
+    }
     deinit {
         print("MainNewsVC is deinited")
     }

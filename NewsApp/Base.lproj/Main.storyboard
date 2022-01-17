@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgP-Dh-PL2">
-                                <rect key="frame" x="300.33333333333331" y="60" width="73.666666666666686" height="31"/>
+                                <rect key="frame" x="101.33333333333331" y="60" width="73.666666666666686" height="31"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Refresh"/>
@@ -121,17 +121,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rb-QD-BGT">
+                                <rect key="frame" x="330.33333333333331" y="60.333333333333336" width="43.666666666666686" height="30.666666666666664"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="person.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="loginButtonDidClick:" destination="CAE-Zu-bXE" eventType="touchUpInside" id="SiF-X5-ApG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rta-r9-Fuf"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                         <constraints>
-                            <constraint firstItem="wgP-Dh-PL2" firstAttribute="trailing" secondItem="rta-r9-Fuf" secondAttribute="trailing" constant="-16" id="0FT-f8-uOx"/>
                             <constraint firstItem="8kn-Fl-mGI" firstAttribute="top" secondItem="6p9-Yy-1ns" secondAttribute="bottom" constant="16" id="5e6-JM-yuc"/>
                             <constraint firstItem="8kn-Fl-mGI" firstAttribute="leading" secondItem="rta-r9-Fuf" secondAttribute="leading" id="6nF-HR-e0W"/>
+                            <constraint firstItem="wgP-Dh-PL2" firstAttribute="leading" secondItem="6p9-Yy-1ns" secondAttribute="trailing" constant="10" id="94r-Tr-LEw"/>
                             <constraint firstItem="8kn-Fl-mGI" firstAttribute="trailing" secondItem="rta-r9-Fuf" secondAttribute="trailing" id="Kd4-vn-4cZ"/>
                             <constraint firstItem="6p9-Yy-1ns" firstAttribute="top" secondItem="rta-r9-Fuf" secondAttribute="top" constant="16" id="S3n-oX-fld"/>
+                            <constraint firstItem="5rb-QD-BGT" firstAttribute="bottom" secondItem="wgP-Dh-PL2" secondAttribute="bottom" id="aRD-GW-nee"/>
                             <constraint firstItem="wgP-Dh-PL2" firstAttribute="top" secondItem="rta-r9-Fuf" secondAttribute="top" constant="16" id="dB2-J6-1XP"/>
                             <constraint firstItem="8kn-Fl-mGI" firstAttribute="bottom" secondItem="rta-r9-Fuf" secondAttribute="bottom" id="eKT-xc-rcG"/>
+                            <constraint firstItem="5rb-QD-BGT" firstAttribute="trailing" secondItem="rta-r9-Fuf" secondAttribute="trailing" constant="-16" id="kAQ-mP-Mbv"/>
                             <constraint firstItem="6p9-Yy-1ns" firstAttribute="leading" secondItem="rta-r9-Fuf" secondAttribute="leading" constant="16" id="zvA-t7-ylE"/>
                         </constraints>
                     </view>
@@ -240,6 +251,7 @@
         <image name="animal" width="2121" height="1414"/>
         <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
         <image name="bin.xmark" catalog="system" width="128" height="93"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
