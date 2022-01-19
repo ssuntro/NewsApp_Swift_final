@@ -13,9 +13,15 @@ struct LoginView: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    Text("A")
+                    Picker(selection: $isLoginMode,
+                           label: Text("Picker")) {
+                        Text("Login")
+                            .tag(true)
+                        Text("Signup")
+                            .tag(false)
+                    }.pickerStyle(SegmentedPickerStyle())
                 }
-            }
+            }.navigationTitle(isLoginMode ? "Login": "Signup")
         }
     }
 }
