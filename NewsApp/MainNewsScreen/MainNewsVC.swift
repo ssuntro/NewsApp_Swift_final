@@ -22,6 +22,7 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             tableView.reloadData()
         }
     }
+    @IBOutlet weak var loginButton: UIButton!
     lazy var loadingView: UIView  = {
         let view = UINib(nibName: "LoadingView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
         view.backgroundColor = .clear
@@ -35,6 +36,7 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.tintColor = .clear
         tableView.dataSource = self
         tableView.delegate = self
         let refreshControl = UIRefreshControl()
