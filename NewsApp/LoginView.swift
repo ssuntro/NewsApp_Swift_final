@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     @State var isLoginMode = false
+    @State var email = ""
     var body: some View {
         NavigationView {
             ScrollView {
@@ -20,6 +21,10 @@ struct LoginView: View {
                         Text("Signup")
                             .tag(false)
                     }.pickerStyle(SegmentedPickerStyle())
+                    
+                    TextField("Email", text: $email)
+                        .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
                 }
             }.navigationTitle(isLoginMode ? "Login": "Signup")
         }
