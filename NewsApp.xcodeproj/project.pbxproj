@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BB4DD26B2795B49000203A17 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4DD26A2795B49000203A17 /* LoginView.swift */; };
+		BBBE211B279B189200694126 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBE211A279B189200694126 /* ImagePickerView.swift */; };
+		BBBE211D279B190C00694126 /* AnnCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBE211C279B190C00694126 /* AnnCoordinator.swift */; };
+		BBBE211F279B192E00694126 /* CaptureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBE211E279B192E00694126 /* CaptureImageView.swift */; };
 		BBDD1BFC278991110069748B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1BFB278991110069748B /* AppDelegate.swift */; };
 		BBDD1BFE278991150069748B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1BFD278991150069748B /* SceneDelegate.swift */; };
 		BBDD1C03278991150069748B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDD1C01278991150069748B /* Main.storyboard */; };
@@ -56,6 +59,9 @@
 
 /* Begin PBXFileReference section */
 		BB4DD26A2795B49000203A17 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BBBE211A279B189200694126 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		BBBE211C279B190C00694126 /* AnnCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnCoordinator.swift; sourceTree = "<group>"; };
+		BBBE211E279B192E00694126 /* CaptureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageView.swift; sourceTree = "<group>"; };
 		BBDD1BF8278991100069748B /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDD1BFB278991110069748B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBDD1BFD278991150069748B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,7 +150,10 @@
 				BBDD1BFD278991150069748B /* SceneDelegate.swift */,
 				BBDD1C2E278998B30069748B /* LaunchVC.swift */,
 				BBDD1C41278B24230069748B /* NewsVC.swift */,
+				BBBE211A279B189200694126 /* ImagePickerView.swift */,
 				BBFE53CE279134F9006D05B3 /* NewsFetcher.swift */,
+				BBBE211C279B190C00694126 /* AnnCoordinator.swift */,
+				BBBE211E279B192E00694126 /* CaptureImageView.swift */,
 				BBFE53D22792AC90006D05B3 /* NewsFetcherAwait.swift */,
 				BBFE53D027915A9F006D05B3 /* LoadingView.xib */,
 				BBDD1C342789C2800069748B /* DemoVC.swift */,
@@ -352,6 +361,7 @@
 			files = (
 				BBDD1C40278AA75D0069748B /* NewsStatus.swift in Sources */,
 				BBDD1C372789CC700069748B /* NewsSection.swift in Sources */,
+				BBBE211B279B189200694126 /* ImagePickerView.swift in Sources */,
 				BBFE53CF279134F9006D05B3 /* NewsFetcher.swift in Sources */,
 				BB4DD26B2795B49000203A17 /* LoginView.swift in Sources */,
 				BBDD1C392789D73B0069748B /* NewsTableViewCell.swift in Sources */,
@@ -359,12 +369,14 @@
 				BBFE53D32792AC90006D05B3 /* NewsFetcherAwait.swift in Sources */,
 				BBDD1C3C278A9FCD0069748B /* News.swift in Sources */,
 				BBDD1C42278B24230069748B /* NewsVC.swift in Sources */,
+				BBBE211D279B190C00694126 /* AnnCoordinator.swift in Sources */,
 				BBFE53DA2793DDFE006D05B3 /* AppIconManager.swift in Sources */,
 				BBDD1C2F278998B30069748B /* LaunchVC.swift in Sources */,
 				BBDD1C332789B1240069748B /* MainNewsVC.swift in Sources */,
 				BBDD1BFC278991110069748B /* AppDelegate.swift in Sources */,
 				BBDD1BFE278991150069748B /* SceneDelegate.swift in Sources */,
 				BBDD1C352789C2800069748B /* DemoVC.swift in Sources */,
+				BBBE211F279B192E00694126 /* CaptureImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

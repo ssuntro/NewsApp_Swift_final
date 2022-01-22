@@ -10,7 +10,10 @@ import SwiftUI
 
 struct LoginView: View {
     @State var isLoginMode = false
-//    var isLoginMode = false
+    
+    @State var image: Image? = nil
+    @State var showCaptureImageView = false
+    
     @State var email = ""
     @State var password = ""
     var body: some View {
@@ -41,10 +44,13 @@ struct LoginView: View {
                             .padding(.vertical, 10)
                             .font(.system(size: 14, weight: .semibold))
                         Spacer()
-                            
                     }.background(.blue)
                     
                 }.padding()
+                
+                if (showCaptureImageView) {
+                  CaptureImageView(isShown: $showCaptureImageView, image: $image)
+                }
             }
             .navigationTitle(isLoginMode ? "Login": "Signup")
             .background(Color.init(white: 0, opacity: 0.05))
@@ -62,8 +68,10 @@ struct LoginView: View {
     }
     
     var imagePicker: some View {
+        Group {
         Button {
-            imageButtonDidClick()
+//            imageButtonDidClick()
+            self.showCaptureImageView.toggle()
         } label: {
             VStack {
                 Image(systemName: "person.fill")
@@ -73,6 +81,13 @@ struct LoginView: View {
             }
             .overlay(
                     RoundedRectangle(cornerRadius: 64).stroke(Color.black, lineWidth: 3))
+        }
+        
+        image?.resizable()
+          .frame(width: 250, height: 200)
+          .clipShape(Circle())
+          .overlay(Circle().stroke(Color.white, lineWidth: 4))
+          .shadow(radius: 10)
         }
     }
     
