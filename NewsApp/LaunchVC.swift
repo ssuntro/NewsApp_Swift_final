@@ -20,6 +20,13 @@ class LaunchVC: UIViewController {
         animationView.animationSpeed = 0.5
         return animationView
     }()
+    
+    lazy var imagePicker: UIImagePickerController = {
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        return vc
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         animateDinosaur()
@@ -27,10 +34,9 @@ class LaunchVC: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
             
             print("Ann ja")
-            //present MainNewVC
-            
             let mainNewsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNewsVC") as! MainNewsVC
-
+            
+            
 //            option#1
 //            let demoVC = UIViewController()
 //            demoVC.view.backgroundColor = .red
@@ -38,10 +44,9 @@ class LaunchVC: UIViewController {
 //            self?.present(demoVC, animated: true, completion: nil)
             
 //            option#2
-            guard let window = self.view.window else {
-                return
-            }
+            guard let self = self, let window = self.view.window else { return }
             window.rootViewController = mainNewsVC
+//            window.rootViewController = self.imagePicker
             window.makeKeyAndVisible()
             UIView.transition(with: window,
                                   duration: 0.3,
