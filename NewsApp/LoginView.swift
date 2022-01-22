@@ -74,20 +74,23 @@ struct LoginView: View {
             self.showCaptureImageView.toggle()
         } label: {
             VStack {
-                Image(systemName: "person.fill")
-                    .font(.system(size: 64))
-                    .padding()
-                    .foregroundColor(Color(.label))
+                if let image = image {
+                    image.resizable()
+                        .frame(width: 100, height: 100)
+//                        .padding()
+                        .clipShape(Circle())
+                } else {
+                    Image(systemName: "person.fill")
+                        .font(.system(size: 64))
+                        .padding()
+                        .foregroundColor(Color(.label))
+                }
+                
+                
             }
-            .overlay(
-                    RoundedRectangle(cornerRadius: 64).stroke(Color.black, lineWidth: 3))
+            .overlay(Circle().stroke(Color.white, lineWidth: 4))
+            .shadow(radius: 10)
         }
-        
-        image?.resizable()
-          .frame(width: 250, height: 200)
-          .clipShape(Circle())
-          .overlay(Circle().stroke(Color.white, lineWidth: 4))
-          .shadow(radius: 10)
         }
     }
     
