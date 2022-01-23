@@ -6,11 +6,21 @@
 //
 
 import UIKit
+import EventKit
+import EventKitUI
+
 protocol NewsVCDelegate: AnyObject {
     func newVCRemoveButtonDidClick(_ vc: NewsVC)
 }
 
+extension NewsVC: EKEventViewDelegate {
+    func eventViewController(_ controller: EKEventViewController, didCompleteWith action: EKEventViewAction) {
+        dismiss(animated: true, completion: nil)
+    }
+}
 class NewsVC: UIViewController {
+    
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyTextView: UITextView!
     var news: News!
@@ -41,6 +51,35 @@ class NewsVC: UIViewController {
             self.onRemovedButtonDidClick?(self.news)
         }
     }
+    let store = EKEventStore()
+    @IBAction func calendarButtonDidClick(_ sender: Any) {
+//        let vc = EKEventViewController()
+//        vc.delegate = self
+//        vc.event = newEvent
+//        let navVC = UINavigationController(rootViewController: vc)
+//        self?.present(navVC, animated: true, completion: nil)
+        
+        store.requestAccess(to: .event) { [weak self] success, error in
+            if success, error == nil {
+                guard let store = self?.store else { return }
+
+                let newEvent = EKEvent(eventStore: store)
+                newEvent.title = "AnnJa Event"
+                newEvent.startDate = Date()
+                newEvent.endDate = Date()
+
+                DispatchQueue.main.async {
+                    let vc = EKEventViewController()
+                    vc.delegate = self
+                    vc.event = newEvent
+                    let navVC = UINavigationController(rootViewController: vc)
+                    self?.present(navVC, animated: true, completion: nil)
+                }
+            }
+        }
+        
+    }
+    
     deinit {
         print("NewsVC is deinited.")
     }
