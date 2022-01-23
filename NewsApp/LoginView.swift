@@ -52,9 +52,8 @@ struct LoginView: View {
                   CaptureImageView(isShown: $showCaptureImageView, image: $image)
                 }
             }
-            .navigationTitle(isLoginMode ? "Login": "Signup")
             .background(Color.init(white: 0, opacity: 0.05))
-        }
+        }.navigationTitle(isLoginMode ? "Login": "Signup")
     }
     
     var pickerView: some View {
