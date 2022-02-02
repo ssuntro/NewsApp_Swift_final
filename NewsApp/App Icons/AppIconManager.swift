@@ -10,6 +10,6 @@ import UIKit
 
 struct AppIconManager {
     func setIcon(from row: Int) {
-        UIApplication.shared.setAlternateIconName(row % 2 == 0 ? "eye-icon": "cake-icon")
+        UIApplication.shared.setAlternateIconName(row % 2 == 0 ? "thai-icon": "jp-icon")
     }
 }

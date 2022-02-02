@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-<!--	<key>NSRemindersUsageDescription</key>-->
-<!--	<string>รีมายเด้อออ</string>-->
 	<key>NSCalendarsUsageDescription</key>
 	<string>คาเลนด้าาา</string>
 	<key>NSCameraUsageDescription</key>
@@ -21,18 +19,18 @@
 		</dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>cake-icon</key>
+			<key>jp-icon</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>cake</string>
+					<string>jp</string>
 				</array>
 			</dict>
-			<key>eye-icon</key>
+			<key>thai-icon</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>eye</string>
+					<string>thai</string>
 				</array>
 			</dict>
 		</dict>

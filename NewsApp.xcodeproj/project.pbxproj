@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1E92E627AAD7B2006DAAFB /* thai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB1E92E427AAD7B1006DAAFB /* thai@2x.png */; };
+		BB1E92E727AAD7B2006DAAFB /* thai@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB1E92E527AAD7B1006DAAFB /* thai@3x.png */; };
+		BB1E92EA27AADA41006DAAFB /* jp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB1E92E827AADA41006DAAFB /* jp@2x.png */; };
+		BB1E92EB27AADA41006DAAFB /* jp@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB1E92E927AADA41006DAAFB /* jp@3x.png */; };
 		BB4DD26B2795B49000203A17 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4DD26A2795B49000203A17 /* LoginView.swift */; };
 		BBBE211B279B189200694126 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBE211A279B189200694126 /* ImagePickerView.swift */; };
 		BBBE211D279B190C00694126 /* AnnCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBE211C279B190C00694126 /* AnnCoordinator.swift */; };
@@ -34,10 +38,6 @@
 		BBFE53D127915A9F006D05B3 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBFE53D027915A9F006D05B3 /* LoadingView.xib */; };
 		BBFE53D32792AC90006D05B3 /* NewsFetcherAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE53D22792AC90006D05B3 /* NewsFetcherAwait.swift */; };
 		BBFE53DA2793DDFE006D05B3 /* AppIconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE53D92793DDFE006D05B3 /* AppIconManager.swift */; };
-		BBFE53ED2793E9E6006D05B3 /* cake@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBFE53EB2793E9E6006D05B3 /* cake@3x.png */; };
-		BBFE53F32793EBFB006D05B3 /* eye@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBFE53F12793EBFB006D05B3 /* eye@3x.png */; };
-		BBFE53F42793EBFB006D05B3 /* eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBFE53F22793EBFB006D05B3 /* eye@2x.png */; };
-		BBFE53F62793ECB2006D05B3 /* cake@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBFE53F52793ECB2006D05B3 /* cake@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB1E92E427AAD7B1006DAAFB /* thai@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thai@2x.png"; sourceTree = "<group>"; };
+		BB1E92E527AAD7B1006DAAFB /* thai@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thai@3x.png"; sourceTree = "<group>"; };
+		BB1E92E827AADA41006DAAFB /* jp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jp@2x.png"; sourceTree = "<group>"; };
+		BB1E92E927AADA41006DAAFB /* jp@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jp@3x.png"; sourceTree = "<group>"; };
 		BB4DD26A2795B49000203A17 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BBBE211A279B189200694126 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		BBBE211C279B190C00694126 /* AnnCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnCoordinator.swift; sourceTree = "<group>"; };
@@ -88,10 +92,6 @@
 		BBFE53D027915A9F006D05B3 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		BBFE53D22792AC90006D05B3 /* NewsFetcherAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFetcherAwait.swift; sourceTree = "<group>"; };
 		BBFE53D92793DDFE006D05B3 /* AppIconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconManager.swift; sourceTree = "<group>"; };
-		BBFE53EB2793E9E6006D05B3 /* cake@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cake@3x.png"; sourceTree = "<group>"; };
-		BBFE53F12793EBFB006D05B3 /* eye@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eye@3x.png"; sourceTree = "<group>"; };
-		BBFE53F22793EBFB006D05B3 /* eye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eye@2x.png"; sourceTree = "<group>"; };
-		BBFE53F52793ECB2006D05B3 /* cake@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cake@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,10 +207,10 @@
 		BBFE53D42793DC1B006D05B3 /* App Icons */ = {
 			isa = PBXGroup;
 			children = (
-				BBFE53F52793ECB2006D05B3 /* cake@2x.png */,
-				BBFE53F22793EBFB006D05B3 /* eye@2x.png */,
-				BBFE53F12793EBFB006D05B3 /* eye@3x.png */,
-				BBFE53EB2793E9E6006D05B3 /* cake@3x.png */,
+				BB1E92E427AAD7B1006DAAFB /* thai@2x.png */,
+				BB1E92E827AADA41006DAAFB /* jp@2x.png */,
+				BB1E92E927AADA41006DAAFB /* jp@3x.png */,
+				BB1E92E527AAD7B1006DAAFB /* thai@3x.png */,
 				BBFE53D92793DDFE006D05B3 /* AppIconManager.swift */,
 			);
 			path = "App Icons";
@@ -326,15 +326,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB1E92EB27AADA41006DAAFB /* jp@3x.png in Resources */,
 				BBDD1C08278991180069748B /* LaunchScreen.storyboard in Resources */,
 				BBDD1C05278991180069748B /* Assets.xcassets in Resources */,
-				BBFE53F32793EBFB006D05B3 /* eye@3x.png in Resources */,
 				BBDD1C03278991150069748B /* Main.storyboard in Resources */,
+				BB1E92E727AAD7B2006DAAFB /* thai@3x.png in Resources */,
 				BBDD1C3127899B490069748B /* dino.json in Resources */,
-				BBFE53F42793EBFB006D05B3 /* eye@2x.png in Resources */,
+				BB1E92E627AAD7B2006DAAFB /* thai@2x.png in Resources */,
 				BBFE53D127915A9F006D05B3 /* LoadingView.xib in Resources */,
-				BBFE53F62793ECB2006D05B3 /* cake@2x.png in Resources */,
-				BBFE53ED2793E9E6006D05B3 /* cake@3x.png in Resources */,
+				BB1E92EA27AADA41006DAAFB /* jp@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
