@@ -53,7 +53,8 @@ struct LoginView: View {
                 }
             }
             .background(Color.init(white: 0, opacity: 0.05))
-        }.navigationTitle(isLoginMode ? "Login": "Signup")
+            .navigationTitle(isLoginMode ? "Login": "Signup")
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
     
     var pickerView: some View {

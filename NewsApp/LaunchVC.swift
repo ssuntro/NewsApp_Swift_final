@@ -31,7 +31,7 @@ class LaunchVC: UIViewController {
         super.viewDidLoad()
         animateDinosaur()
         // 5 sec
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) { [weak self] in
             
             print("Ann ja")
             let mainNewsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNewsVC") as! MainNewsVC
