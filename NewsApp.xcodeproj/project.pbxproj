@@ -13,6 +13,7 @@
 		BB1E92EB27AADA41006DAAFB /* jp@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB1E92E927AADA41006DAAFB /* jp@3x.png */; };
 		BB4DD26B2795B49000203A17 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4DD26A2795B49000203A17 /* LoginView.swift */; };
 		BB91E1DC27AEC68600395AC6 /* LoginView+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91E1DB27AEC68600395AC6 /* LoginView+UI.swift */; };
+		BB91E22027AFFCE900395AC6 /* DummyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91E21F27AFFCE900395AC6 /* DummyCell.xib */; };
 		BBBE211B279B189200694126 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBE211A279B189200694126 /* ImagePickerView.swift */; };
 		BBBE211D279B190C00694126 /* AnnCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBE211C279B190C00694126 /* AnnCoordinator.swift */; };
 		BBBE211F279B192E00694126 /* CaptureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBE211E279B192E00694126 /* CaptureImageView.swift */; };
@@ -65,6 +66,7 @@
 		BB1E92E927AADA41006DAAFB /* jp@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jp@3x.png"; sourceTree = "<group>"; };
 		BB4DD26A2795B49000203A17 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BB91E1DB27AEC68600395AC6 /* LoginView+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginView+UI.swift"; sourceTree = "<group>"; };
+		BB91E21F27AFFCE900395AC6 /* DummyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DummyCell.xib; sourceTree = "<group>"; };
 		BBBE211A279B189200694126 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		BBBE211C279B190C00694126 /* AnnCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnCoordinator.swift; sourceTree = "<group>"; };
 		BBBE211E279B192E00694126 /* CaptureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageView.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				BBBE211C279B190C00694126 /* AnnCoordinator.swift */,
 				BBBE211E279B192E00694126 /* CaptureImageView.swift */,
 				BBFE53D22792AC90006D05B3 /* NewsFetcherAwait.swift */,
+				BB91E21F27AFFCE900395AC6 /* DummyCell.xib */,
 				BBFE53D027915A9F006D05B3 /* LoadingView.xib */,
 				BBDD1C342789C2800069748B /* DemoVC.swift */,
 				BBDD1C43278B24510069748B /* Data model */,
@@ -329,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB91E22027AFFCE900395AC6 /* DummyCell.xib in Resources */,
 				BB1E92EB27AADA41006DAAFB /* jp@3x.png in Resources */,
 				BBDD1C08278991180069748B /* LaunchScreen.storyboard in Resources */,
 				BBDD1C05278991180069748B /* Assets.xcassets in Resources */,

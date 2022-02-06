@@ -43,6 +43,8 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         refreshControl.addTarget(self, action: #selector(fetchData), for: UIControl.Event.valueChanged)
         tableView.refreshControl = refreshControl
         fetchData()
+        
+        tableView.register(UINib(nibName: "DummyCell", bundle: nil), forCellReuseIdentifier: "DummyCell")
     }
     
     @objc func fetchData() {
@@ -117,6 +119,8 @@ extension MainNewsVC  {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        return tableView.dequeueReusableCell(withIdentifier: "DummyCell", for: indexPath) as! UITableViewCell
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
         cell.titleLabel.text = news[indexPath.row].detail.title
         cell.typeBadge.tintColor = news[indexPath.row].detail.status.color
