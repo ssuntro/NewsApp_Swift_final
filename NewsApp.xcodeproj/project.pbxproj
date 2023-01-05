@@ -17,6 +17,7 @@
 		BBBE211B279B189200694126 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBE211A279B189200694126 /* ImagePickerView.swift */; };
 		BBBE211D279B190C00694126 /* AnnCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBE211C279B190C00694126 /* AnnCoordinator.swift */; };
 		BBBE211F279B192E00694126 /* CaptureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBE211E279B192E00694126 /* CaptureImageView.swift */; };
+		BBC3F9E429669063001F3A30 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BBC3F9E329669063001F3A30 /* Lottie */; };
 		BBDD1BFC278991110069748B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1BFB278991110069748B /* AppDelegate.swift */; };
 		BBDD1BFE278991150069748B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1BFD278991150069748B /* SceneDelegate.swift */; };
 		BBDD1C03278991150069748B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDD1C01278991150069748B /* Main.storyboard */; };
@@ -25,7 +26,6 @@
 		BBDD1C13278991180069748B /* NewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C12278991180069748B /* NewsAppTests.swift */; };
 		BBDD1C1D278991180069748B /* NewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C1C278991180069748B /* NewsAppUITests.swift */; };
 		BBDD1C1F278991180069748B /* NewsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C1E278991180069748B /* NewsAppUITestsLaunchTests.swift */; };
-		BBDD1C2D2789986F0069748B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BBDD1C2C2789986F0069748B /* Lottie */; };
 		BBDD1C2F278998B30069748B /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C2E278998B30069748B /* LaunchVC.swift */; };
 		BBDD1C3127899B490069748B /* dino.json in Resources */ = {isa = PBXBuildFile; fileRef = BBDD1C3027899B480069748B /* dino.json */; };
 		BBDD1C332789B1240069748B /* MainNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD1C322789B1240069748B /* MainNewsVC.swift */; };
@@ -103,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDD1C2D2789986F0069748B /* Lottie in Frameworks */,
+				BBC3F9E429669063001F3A30 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +239,7 @@
 			);
 			name = NewsApp;
 			packageProductDependencies = (
-				BBDD1C2C2789986F0069748B /* Lottie */,
+				BBC3F9E329669063001F3A30 /* Lottie */,
 			);
 			productName = NewsApp;
 			productReference = BBDD1BF8278991100069748B /* NewsApp.app */;
@@ -314,7 +314,7 @@
 			);
 			mainGroup = BBDD1BEF278991100069748B;
 			packageReferences = (
-				BBDD1C2B2789986F0069748B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				BBC3F9E229669063001F3A30 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = BBDD1BF9278991100069748B /* Products */;
 			projectDirPath = "";
@@ -732,20 +732,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BBDD1C2B2789986F0069748B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		BBC3F9E229669063001F3A30 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
+				kind = exactVersion;
+				version = 3.3.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BBDD1C2C2789986F0069748B /* Lottie */ = {
+		BBC3F9E329669063001F3A30 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BBDD1C2B2789986F0069748B /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = BBC3F9E229669063001F3A30 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
