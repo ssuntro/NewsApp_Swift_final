@@ -31,6 +31,7 @@ class NewsVC: UIViewController {
         super.viewDidLoad()
         titleLabel.text = news?.detail.title
         bodyTextView.text = news?.detail.body
+        bodyTextView.isEditable = false
     }
     
     @IBAction func forMoreDetailButtonDidClick(_ sender: Any) {

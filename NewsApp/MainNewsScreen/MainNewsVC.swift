@@ -103,6 +103,7 @@ extension MainNewsVC {
             }
         }
         newsVC.modalPresentationStyle = .pageSheet
+//        performSegue(withIdentifier: "newsSegue", sender: indexPath.row)
         self.present(newsVC, animated: true) {
             print("DidSelect")
             tableView.deselectRow(at: indexPath, animated: true)

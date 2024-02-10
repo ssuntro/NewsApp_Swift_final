@@ -16,7 +16,8 @@ class NewsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        makeCircleBorder()
+        makeCircleBorder()
+        typeBadge.isUserInteractionEnabled = false
         
     }
     
