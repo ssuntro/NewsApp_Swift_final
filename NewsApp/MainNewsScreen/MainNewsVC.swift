@@ -185,3 +185,17 @@ extension MainNewsVC  {
 //        }
 //    }
 }
+
+
+extension UITableView {
+    public func beginRefreshing() {
+        let contentOffset = CGPoint(x: 0, y: -(self.refreshControl?.frame.size.height ?? 0))
+        self.setContentOffset(contentOffset, animated: true)
+        self.refreshControl?.beginRefreshing()
+    }
+    public func endRefreshing() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [weak self] in
+            self?.refreshControl?.endRefreshing()
+        }
+    }
+}
