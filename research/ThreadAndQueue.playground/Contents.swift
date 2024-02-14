@@ -20,7 +20,6 @@ func callAPIInBgThreadAnyQ() {
     print("Before start API call")
     task.resume()
     print("After start API call")
-
 }
 
 

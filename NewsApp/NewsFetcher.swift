@@ -16,11 +16,18 @@ let mockAPIResponse = [News(detail: NewsDetail(title: "news1", body: "body1111",
  
 struct NewsFetcher {
     var task: URLSessionDataTask? //why we need task?
+    
+    
 
     mutating func exe(completion: @escaping ([News]) -> Void) { //Why cannot be func exe() -> [News] {}?
+        
+        
         task?.cancel()
         let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-2.json")!
+        
+        
         task = URLSession.shared.dataTask(with: url) { data, response, error in
+
             guard error == nil,
                   let response = response as? HTTPURLResponse,
                   response.statusCode == 200,
@@ -75,6 +82,8 @@ struct NewsFetcher {
             }
             
             DispatchQueue.main.async {
+                
+                
 //                completion(animals + finance + globalWarming)
                 completion(result)
             }

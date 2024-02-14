@@ -23,12 +23,12 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     @IBOutlet weak var loginButton: UIButton!
-    lazy var loadingView: UIView  = {
-        let view = UINib(nibName: "LoadingView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
-        view.backgroundColor = .clear
-        view.center = self.view.center
-        return view
-    }()
+//    lazy var loadingView: UIView  = {
+//        let view = UINib(nibName: "LoadingView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+//        view.backgroundColor = .clear
+//        view.center = self.view.center
+//        return view
+//    }()
     
     @IBOutlet weak var tableView: UITableView!
     var fetcher = NewsFetcher()
@@ -87,6 +87,7 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     deinit {
         print("MainNewsVC is deinited")
     }
+    
 }
 
 //MARK: - UITableViewDelegate
