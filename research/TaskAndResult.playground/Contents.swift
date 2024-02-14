@@ -113,8 +113,9 @@ Task {
     case .success(let data):
         print("fetchData completed.")
         print(data)
-    case .failure(_):
+    case .failure(let error):
         print("error")
+        print(error)
     }
 
 }
