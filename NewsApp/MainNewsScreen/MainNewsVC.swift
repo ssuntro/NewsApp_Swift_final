@@ -43,39 +43,60 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         refreshControl.addTarget(self, action: #selector(fetchData), for: UIControl.Event.valueChanged)
         tableView.refreshControl = refreshControl
         fetchData()
-        
         tableView.register(UINib(nibName: "DummyCell", bundle: nil), forCellReuseIdentifier: "DummyCell")
     }
     
     @objc func fetchData() {
-        view.addSubview(loadingView)
-        view.bringSubviewToFront(loadingView)
-        
-        fetcher.exe { [weak self] result in
-            print("fetchData completed.")
-            self?.news = result
-            self?.loadingView.removeFromSuperview()
-            self?.tableView.refreshControl?.endRefreshing()
+        Task { [weak self] in
+            //main.async thread always
+            guard let self = self else { return }
+            self.news = await self.fetchData1()
+            self.tableView.endRefreshing()
         }
-        
-        
-//        Task { [weak self] in
-//            //main.async thread always
-//            let result = await NewsFetcherAwait().task.result
-//            switch(result) {
-//            case .success(let data):
-//                print("fetchData completed.")
-//                self?.news = data
-//            case .failure(_):
-//                print("error")
-//            }
-//            self?.loadingView.removeFromSuperview()
-//        }
     }
     
     @IBAction func refreshButtonDidClick(_ sender: Any) {
-        fetchData()
+        self.tableView.beginRefreshing()
+        
+        Task { [weak self] in
+            guard let self = self else { return }
+            self.news = await self.fetchData1()
+           
+            self.tableView.endRefreshing()
+        }
     }
+    
+    func fetchData1() async -> [News]  {
+        
+        let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-2.json")!
+        guard let (data, response) =  try? await URLSession.shared.data(from: url) else {
+            return [News]()
+        }
+        guard let response = response as? HTTPURLResponse,
+              response.statusCode == 200,
+              let dict = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+              let rawNews = dict["results"] as? [[String: Any]] else {
+                      return [News]()
+              }
+        return [
+            rawNews[0...3],
+            rawNews[4...6],
+            rawNews[7...15]]
+            .enumerated()
+            .map { (index, list) in
+                list.compactMap { elem -> News? in
+                    if let data = try? JSONSerialization.data(withJSONObject: elem, options: []),
+                       let detail = try? JSONDecoder().decode(NewsDetail.self, from: data),
+                       let category = NewsCategory(rawValue: index) {
+                        return News(detail: detail, category: category)
+                    }
+                    return nil
+                }
+            }.reduce([News]()) { partialResult, elem in
+                partialResult + elem
+            }
+    }
+    
     @IBAction func reoderButtonDidClick(_ sender: Any) {
         tableView.isEditing = !tableView.isEditing
     }
