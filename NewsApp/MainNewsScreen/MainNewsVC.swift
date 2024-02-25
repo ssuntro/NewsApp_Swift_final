@@ -48,53 +48,19 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @objc func fetchData() {
         Task { [weak self] in
-            //main.async thread always
+            //Task here is main thread
+            
             guard let self = self else { return }
-            self.news = await self.fetchData1()
+            self.news = await NewsFetcherAwait().news
             self.tableView.endRefreshing()
+            print("thread: \(Thread.current)")
+            print("is main thread: \(Thread.isMainThread)")
         }
     }
     
     @IBAction func refreshButtonDidClick(_ sender: Any) {
         self.tableView.beginRefreshing()
-        
-        Task { [weak self] in
-            guard let self = self else { return }
-            self.news = await self.fetchData1()
-           
-            self.tableView.endRefreshing()
-        }
-    }
-    
-    func fetchData1() async -> [News]  {
-        
-        let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-2.json")!
-        guard let (data, response) =  try? await URLSession.shared.data(from: url) else {
-            return [News]()
-        }
-        guard let response = response as? HTTPURLResponse,
-              response.statusCode == 200,
-              let dict = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-              let rawNews = dict["results"] as? [[String: Any]] else {
-                      return [News]()
-              }
-        return [
-            rawNews[0...3],
-            rawNews[4...6],
-            rawNews[7...15]]
-            .enumerated()
-            .map { (index, list) in
-                list.compactMap { elem -> News? in
-                    if let data = try? JSONSerialization.data(withJSONObject: elem, options: []),
-                       let detail = try? JSONDecoder().decode(NewsDetail.self, from: data),
-                       let category = NewsCategory(rawValue: index) {
-                        return News(detail: detail, category: category)
-                    }
-                    return nil
-                }
-            }.reduce([News]()) { partialResult, elem in
-                partialResult + elem
-            }
+        fetchData()
     }
     
     @IBAction func reoderButtonDidClick(_ sender: Any) {
