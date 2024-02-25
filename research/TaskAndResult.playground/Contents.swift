@@ -56,6 +56,7 @@ enum APIError: Error {
 struct NewsFetcherAwait {
     let task: Task<[News], Error> =  {
         return Task { () -> [News] in
+//            throw APIError.NotTwoHundred
             let url = URL(string: "https://www.hackingwithswift.com/samples/petitions-2.json")!
             let (data, response) = try await URLSession.shared.data(from: url)
             guard let response = response as? HTTPURLResponse,
@@ -68,7 +69,7 @@ struct NewsFetcherAwait {
                   let rawNews = dict["results"] as? [[String: Any]] else {
                 throw APIError.FailedSerialisation
             }
-            
+//            v.1
 //            return [
 //                rawNews[0...3],
 //                rawNews[4...6],
@@ -86,6 +87,9 @@ struct NewsFetcherAwait {
 //                    partialResult + elem
 //                }
             
+            
+            
+//            v.2
             return [
                 rawNews[0...3],
                 rawNews[4...6],
