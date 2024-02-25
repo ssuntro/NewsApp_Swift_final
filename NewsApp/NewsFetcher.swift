@@ -82,8 +82,6 @@ struct NewsFetcher {
             }
             
             DispatchQueue.main.async {
-                
-                
 //                completion(animals + finance + globalWarming)
                 completion(result)
             }
