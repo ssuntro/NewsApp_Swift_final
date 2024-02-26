@@ -1,5 +1,6 @@
 import SwiftUI
 
+//warning: aware of mem leak by accidentally hold self variable
 //how many lambda function we have here in ContentView == 3
 struct ContentView: View {
     var body: some View {
