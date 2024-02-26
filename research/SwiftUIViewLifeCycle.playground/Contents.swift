@@ -1,6 +1,6 @@
 import SwiftUI
 
-
+//            didLoad, didAppear, didDisappear, deinit - https://stevenpcurtis.medium.com/the-uiviewcontroller-lifecycle-b964cf18256b
 //https://www.hackingwithswift.com/quick-start/swiftui/how-to-respond-to-view-lifecycle-events-onappear-and-ondisappear
 struct ContentView: View {
     var body: some View {
