@@ -41,6 +41,32 @@ struct MatchedView: View {
                 .padding(20)
             }
             else {
+//                exmaple of simple tableView
+//                ScrollView {
+//                    VStack(spacing: 20) {
+//                        ForEach(0..<10) {
+//                            Text("Item \($0)")
+//                                .foregroundStyle(.white)
+//                                .font(.largeTitle)
+//                                .frame(width: 200, height: 200)
+//                                .background(.red)
+//                        }
+//                    }
+//                }
+//                .frame(height: 350)
+//                ScrollView(.horizontal) {
+//                    HStack(spacing: 20) {
+//                        ForEach(0..<10) {
+//                            Text("Item \($0)")
+//                                .foregroundStyle(.white)
+//                                .font(.largeTitle)
+//                                .frame(width: 200, height: 200)
+//                                .background(.red)
+//                        }
+//                    }
+//                }
+                
+                
                 ScrollView {
                     VStack(alignment: .leading, spacing: 12) {
                         Spacer()
