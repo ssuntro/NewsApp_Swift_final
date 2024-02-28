@@ -1,32 +1,46 @@
 import SwiftUI
 
-struct MatchedView: View {
+struct ContentView: View {
     @Namespace var namespace
-    @State var show = false
+    @State var showingSheet = false
     
     var body: some View {
-        ZStack {
-            Color(.black).ignoresSafeArea()
-            ScrollView {
-                if !show {
-                    AdvertisementItem(namespace: namespace, show: $show)
-                        .onTapGesture {
-                            withAnimation {
-                                show.toggle()
-                            }
-                        }
+        AdvertisementItem(namespace: namespace)
+            .onTapGesture {
+                withAnimation {
+                    showingSheet.toggle()
                 }
-            }
-            
-        }
-        .coordinateSpace(name: "scroll")
-        .safeAreaInset(edge: .top) {
-            Color.clear.frame(height: 70)
-        }
-        .overlay(Text("Ann"))
-        if show {
-            AdvertisementView(namespace: namespace, show: $show)
-        }
+            }.frame(maxHeight: .infinity)
+            .sheet(isPresented: $showingSheet, content: {
+                AdvertisementView(namespace: namespace)
+            })
+            .background(Color.black)
+        
+        
+//        ZStack {
+//            Color(.black).ignoresSafeArea()
+//            ScrollView {
+////                VStack(spacing: 20) {}
+//                if !show {
+//                    AdvertisementItem(namespace: namespace, show: $show)
+//                        .onTapGesture {
+//                            withAnimation {
+//                                show.toggle()
+//                            }
+//                        }
+//                } else {
+//                    AdvertisementView(namespace: namespace, show: $show)
+//                }
+//            }
+//            
+//        }
+//        .frame(maxHeight: .infinity)
+//        .coordinateSpace(name: "scroll")
+//        .safeAreaInset(edge: .top) {
+//            Color.clear.frame(height: 70)
+//        }
+//        .overlay(Text("Ann"))
+        
         
         
 //        ZStack {

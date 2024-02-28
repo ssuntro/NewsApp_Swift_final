@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AdvertisementItem: View {
     var namespace: Namespace.ID
-    @Binding var show: Bool
+//    @Binding var show: Bool
     var body: some View {
         VStack {
             Spacer() //expand for max height
@@ -57,5 +57,5 @@ struct AdvertisementItem: View {
 
 #Preview() {
     @Namespace var namespace
-    return AdvertisementItem(namespace: namespace, show: .constant(true))
+    return AdvertisementItem(namespace: namespace)
 }
