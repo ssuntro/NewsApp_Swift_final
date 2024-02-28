@@ -98,7 +98,43 @@ struct MatchedView: View {
                             .matchedGeometryEffect(id: "background", in: namespace))
                     .mask(
                         RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .matchedGeometryEffect(id: "mask", in: namespace))
+                        .matchedGeometryEffect(id: "mask", in: namespace)
+                    )
+                    .overlay(
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Build an iOS app for iOS 18 with custom layouts, animations and ...")
+                                .font(.footnote)
+                                .matchedGeometryEffect(id: "text", in: namespace)
+                            Text("20 sections - 3 hours".uppercased())
+                                .font(.footnote.weight(.semibold))
+                                .matchedGeometryEffect(id: "subtitle", in: namespace)
+                            Text(verbatim: "SwiftUI...")
+                                .font(.largeTitle.weight(.bold))
+                                .matchedGeometryEffect(id: "title", in: namespace)
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                            Divider()
+                            HStack {
+                                Image(systemName: "person")
+                                    .resizable()
+                                    .frame(width: 26, height: 26)
+                                    .cornerRadius(8)
+                                    .padding(8)
+                                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                                    .strokeStyle(cornerRadius: 18)
+                                
+                            }
+                        }
+                        .padding(20)
+                        .background(
+                            Rectangle()
+                                .fill(.ultraThinMaterial)
+                                .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                                .matchedGeometryEffect(id: "blur", in: namespace)
+                        )
+                        .offset(y: 300)
+                        .padding(20)
+                        
+                    )
                 }
             }
         }.onTapGesture {
