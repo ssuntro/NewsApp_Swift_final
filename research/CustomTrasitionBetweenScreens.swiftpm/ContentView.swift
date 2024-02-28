@@ -7,20 +7,29 @@ struct MatchedView: View {
     var body: some View {
         ZStack {
             if !show {
-                VStack(alignment: .leading, spacing: 12) {
+                VStack {
                     Spacer() //expand for max height
-                    Text("20 sections - 3 hours".uppercased())
-                        .font(.footnote.weight(.semibold))
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("20 sections - 3 hours".uppercased())
+                            .font(.footnote.weight(.semibold))
                         .matchedGeometryEffect(id: "subtitle", in: namespace)
-                    Text(verbatim: "SwiftUI")
-                        .font(.largeTitle.weight(.bold))
-                        .matchedGeometryEffect(id: "title", in: namespace)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("Build an x app for iOS 18 with custom layouts, animations and ...")
-                        .font(.footnote)
-                        .matchedGeometryEffect(id: "text", in: namespace)
+                        Text(verbatim: "SwiftUI")
+                            .font(.largeTitle.weight(.bold))
+                            .matchedGeometryEffect(id: "title", in: namespace)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text("Build an x app for iOS 18 with custom layouts, animations and ...")
+                            .font(.footnote)
+                            .matchedGeometryEffect(id: "text", in: namespace)
+                    }
+                    .padding(20)
+                    .background(
+                        Rectangle()
+                            .fill(.ultraThinMaterial)
+                            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                            .blur(radius: 80)
+                            .matchedGeometryEffect(id: "blur", in: namespace)
+                    )
                 }
-                .padding(20)
                 .foregroundColor(.white)
 //                .background(Color.red.matchedGeometryEffect(id: "background", in: namespace))
                 .background(
@@ -68,19 +77,12 @@ struct MatchedView: View {
                 
                 
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 12) {
+                    VStack() {
                         Spacer()
-                        Text("Build an iOS app for iOS 18 with custom layouts, animations and ...")
-                            .font(.footnote)
-                            .matchedGeometryEffect(id: "text", in: namespace)
-                        Text(verbatim: "SwiftUI...")
-                            .font(.largeTitle.weight(.bold))
-                            .matchedGeometryEffect(id: "title", in: namespace)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                        Text("20 sections - 3 hours".uppercased())
-                            .font(.footnote.weight(.semibold))
-                            .matchedGeometryEffect(id: "subtitle", in: namespace)
+                        
                     }
+                    .frame(maxWidth: .infinity)
+                    
                     .frame(height: 500)
                     .padding(20)
                     .foregroundColor(.black)
@@ -111,7 +113,7 @@ struct MatchedView: View {
                             Text(verbatim: "SwiftUI...")
                                 .font(.largeTitle.weight(.bold))
                                 .matchedGeometryEffect(id: "title", in: namespace)
-                                .frame(maxWidth: .infinity, alignment: .trailing)
+                                .frame(maxWidth: .infinity, alignment: .leading)
                             Divider()
                             HStack {
                                 Image(systemName: "person")
@@ -120,7 +122,8 @@ struct MatchedView: View {
                                     .cornerRadius(8)
                                     .padding(8)
                                     .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-                                    .strokeStyle(cornerRadius: 18)
+                                Text("Taught by AnneJa 55")
+                                    .font(.footnote)
                                 
                             }
                         }
@@ -131,7 +134,7 @@ struct MatchedView: View {
                                 .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
                                 .matchedGeometryEffect(id: "blur", in: namespace)
                         )
-                        .offset(y: 300)
+                        .offset(y: 200)
                         .padding(20)
                         
                     )
