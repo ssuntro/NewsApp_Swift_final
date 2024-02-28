@@ -7,7 +7,8 @@ struct MatchedView: View {
     var body: some View {
         ZStack {
             if !show {
-                VStack {
+                VStack(alignment: .leading, spacing: 12) {
+                    Spacer() //expand for max height
                     Text("20 sections - 3 hours".uppercased())
                         .font(.footnote.weight(.semibold))
                         .matchedGeometryEffect(id: "subtitle", in: namespace)
@@ -36,38 +37,43 @@ struct MatchedView: View {
                 .mask(
                     RoundedRectangle(cornerRadius: 30, style: .continuous)
                         .matchedGeometryEffect(id: "mask", in: namespace))
+                .frame(height: 300)
                 .padding(20)
             }
             else {
-                VStack(alignment: .leading, spacing: 12) {
-                    Spacer()
-                    Text("Build an iOS app for iOS 18 with custom layouts, animations and ...")
-                        .font(.footnote)
-                        .matchedGeometryEffect(id: "text", in: namespace)
-                    Text(verbatim: "SwiftUI...")
-                        .font(.largeTitle.weight(.bold))
-                        .matchedGeometryEffect(id: "title", in: namespace)
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                    Text("20 sections - 3 hours".uppercased())
-                        .font(.footnote.weight(.semibold))
-                        .matchedGeometryEffect(id: "subtitle", in: namespace)
-                }
-                .foregroundColor(.black)
-//                .background(.blue)
-//                .background(Color.blue.matchedGeometryEffect(id: "background", in: namespace))
-                .background(
-                    Image(uiImage: UIImage(imageLiteralResourceName:  "8623701.png"))
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .matchedGeometryEffect(id: "image", in: namespace))
-                .background(
-                    Image(uiImage: UIImage(imageLiteralResourceName:  "Background 5.jpg"))
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .matchedGeometryEffect(id: "background", in: namespace))
-                .mask(
-                    RoundedRectangle(cornerRadius: 30, style: .continuous)
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 12) {
+                        Spacer()
+                        Text("Build an iOS app for iOS 18 with custom layouts, animations and ...")
+                            .font(.footnote)
+                            .matchedGeometryEffect(id: "text", in: namespace)
+                        Text(verbatim: "SwiftUI...")
+                            .font(.largeTitle.weight(.bold))
+                            .matchedGeometryEffect(id: "title", in: namespace)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                        Text("20 sections - 3 hours".uppercased())
+                            .font(.footnote.weight(.semibold))
+                            .matchedGeometryEffect(id: "subtitle", in: namespace)
+                    }
+                    .frame(height: 500)
+                    .padding(20)
+                    .foregroundColor(.black)
+    //                .background(.blue)
+    //                .background(Color.blue.matchedGeometryEffect(id: "background", in: namespace))
+                    .background(
+                        Image(uiImage: UIImage(imageLiteralResourceName:  "8623701.png"))
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .matchedGeometryEffect(id: "image", in: namespace))
+                    .background(
+                        Image(uiImage: UIImage(imageLiteralResourceName:  "Background 5.jpg"))
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .matchedGeometryEffect(id: "background", in: namespace))
+                    .mask(
+                        RoundedRectangle(cornerRadius: 30, style: .continuous)
                         .matchedGeometryEffect(id: "mask", in: namespace))
+                }
             }
         }.onTapGesture {
             withAnimation {
