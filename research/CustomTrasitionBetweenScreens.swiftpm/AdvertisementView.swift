@@ -15,6 +15,7 @@ struct AdvertisementView: View {
     var body: some View {
         ZStack {
             ScrollView {
+                
                 cover
             }
             .background(Color.brown)
@@ -30,11 +31,8 @@ struct AdvertisementView: View {
                     .padding(8)
                     .background(.ultraThinMaterial, in: Circle())
             }
+            .offset(y: -150)
         }
-        
-        
-        
-        
         
         
         

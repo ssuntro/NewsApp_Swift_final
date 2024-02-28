@@ -1,5 +1,10 @@
 import SwiftUI
 
+//rule of thump of MatchedGeometryEffect
+//1 matchedGeo should be use on individual ele styling.
+//2. fit you add geometry in wrong position or none of geometry the transition will fall back to default one which is fade in and out transition
+//3. only work for start and destination views that contain in same screen
+
 struct ContentView: View {
     @Namespace var namespace
     @State var showingSheet = false
@@ -58,7 +63,3 @@ struct ContentView: View {
 //        }
     }
 }
-//rule of thump
-//1 matchedGeo should be use on individual ele styling.
-//2. fit you add geometry in wrong position or none of geometry the transition will fall back to default one which is fade in and out transition
-//3. only work for start and destination views that contain in same screen
