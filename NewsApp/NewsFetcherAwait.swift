@@ -20,6 +20,8 @@ struct NewsFetcherAwait {
                   let rawNews = dict["results"] as? [[String: Any]] else {
                           return [News]()
                   }
+            print("NewsFetcherAwait thread: \(Thread.current)")
+            print("NewsFetcherAwait is main thread: \(Thread.isMainThread)")
             return [
                 rawNews[0...3],
                 rawNews[4...6],

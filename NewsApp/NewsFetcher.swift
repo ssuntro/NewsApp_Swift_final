@@ -81,6 +81,8 @@ struct NewsFetcher {
                 partialResult + elem
             }
             
+            print("NewsFetcher thread: \(Thread.current)")
+            print("NewsFetcher is main thread: \(Thread.isMainThread)")
             DispatchQueue.main.async {
 //                completion(animals + finance + globalWarming)
                 completion(result)

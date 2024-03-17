@@ -53,8 +53,16 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             guard let self = self else { return }
             self.news = await NewsFetcherAwait().news
             self.tableView.endRefreshing()
-            print("thread: \(Thread.current)")
-            print("is main thread: \(Thread.isMainThread)")
+            print("fetchData1 thread: \(Thread.current)")
+            print("fetchData1 is main thread: \(Thread.isMainThread)")
+        }
+        
+        print("fetchData2 thread: \(Thread.current)")
+        print("fetchData2 is main thread: \(Thread.isMainThread)")
+        fetcher.exe { newsList in
+            print(newsList)
+            print("fetchData3 thread: \(Thread.current)")
+            print("fetchData3 is main thread: \(Thread.isMainThread)")
         }
     }
     
