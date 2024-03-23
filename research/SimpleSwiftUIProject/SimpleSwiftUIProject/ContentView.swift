@@ -24,8 +24,8 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            TextField("Enter ja: ", text: $name)
-            Text("Hello \(name)")
+            TextField("Enter ja: ", text: $name) //example of pass @state to subview with read-write access
+            Text("Hello \(name)") //example of pass @state to subview with read-only access
                 .onChange(of: name, { oldValue, newValue in
                     print("username changed from \(oldValue) to \(newValue)")
                 })
