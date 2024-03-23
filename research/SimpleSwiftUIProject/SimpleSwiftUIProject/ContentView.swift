@@ -14,7 +14,7 @@ class ViewModel: ObservableObject {
         }
     }
 }
-
+//simple protocol and delegation pattern can be demo by integration UITextField in SwitftUI project. - see also in swiftUI_Delegation_pattern.playground
 struct ContentView: View {
     @State var name = "JAAA"
     @StateObject var viewModel = ViewModel()
