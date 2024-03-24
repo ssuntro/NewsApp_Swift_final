@@ -39,11 +39,22 @@ struct ContentView: View {
         }
         .padding()
         .onAppear(perform: {
+            Task {
+                await callAPIWithAwaitPattern()
+            }
             print("onAppear")
         })
         .onDisappear(perform: {
+            
             print("onDisappear")
         })
+    }
+    
+    func callAPIWithAwaitPattern() async {
+        print("start API call")
+        let url = URL(string: "https://www.boredapi.com/api/activity")!
+        let _ = try? await URLSession.shared.data(from: url)
+        print("complete API call")
     }
 }
 
