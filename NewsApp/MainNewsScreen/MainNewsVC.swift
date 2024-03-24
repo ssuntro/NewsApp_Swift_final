@@ -47,23 +47,28 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     @objc func fetchData() {
-        Task { [weak self] in
-            //Task here is main thread
+        self.news = [News]()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [weak self] in
             
-            guard let self = self else { return }
-            self.news = await NewsFetcherAwait().news
-            self.tableView.endRefreshing()
-            print("fetchData1 thread: \(Thread.current)")
-            print("fetchData1 is main thread: \(Thread.isMainThread)")
+            Task {
+                guard let self = self else { return }
+                self.news = await NewsFetcherAwait().news
+                self.tableView.endRefreshing()
+                print("fetchData1 thread: \(Thread.current)")
+                print("fetchData1 is main thread: \(Thread.isMainThread)")
+            }
+            
+            print("fetchData2 thread: \(Thread.current)")
+            print("fetchData2 is main thread: \(Thread.isMainThread)")
+            
         }
         
-        print("fetchData2 thread: \(Thread.current)")
-        print("fetchData2 is main thread: \(Thread.isMainThread)")
-        fetcher.exe { newsList in
+        self.fetcher.exe { newsList in
             print(newsList)
             print("fetchData3 thread: \(Thread.current)")
             print("fetchData3 is main thread: \(Thread.isMainThread)")
         }
+        
     }
     
     @IBAction func refreshButtonDidClick(_ sender: Any) {
