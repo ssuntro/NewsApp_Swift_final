@@ -23,7 +23,8 @@ struct SimpleSwiftUIProjectApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            SimpleDelegatePatternView()
         }
         .onChange(of: phase) { oldValue, newPhase in
             switch newPhase {

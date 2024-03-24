@@ -14,6 +14,7 @@
 		BBC8782A2BA7569D00F36366 /* SimpleSwiftUIProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC878292BA7569D00F36366 /* SimpleSwiftUIProjectTests.swift */; };
 		BBC878342BA7569D00F36366 /* SimpleSwiftUIProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC878332BA7569D00F36366 /* SimpleSwiftUIProjectUITests.swift */; };
 		BBC878362BA7569D00F36366 /* SimpleSwiftUIProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC878352BA7569D00F36366 /* SimpleSwiftUIProjectUITestsLaunchTests.swift */; };
+		BBE341A92BB0484500834FB1 /* SimpleDelegatePatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE341A82BB0484500834FB1 /* SimpleDelegatePatternView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		BBC8782F2BA7569D00F36366 /* SimpleSwiftUIProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSwiftUIProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC878332BA7569D00F36366 /* SimpleSwiftUIProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSwiftUIProjectUITests.swift; sourceTree = "<group>"; };
 		BBC878352BA7569D00F36366 /* SimpleSwiftUIProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSwiftUIProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BBE341A82BB0484500834FB1 /* SimpleDelegatePatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDelegatePatternView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				BBC878182BA7569A00F36366 /* SimpleSwiftUIProjectApp.swift */,
 				BBC8781A2BA7569A00F36366 /* ContentView.swift */,
+				BBE341A82BB0484500834FB1 /* SimpleDelegatePatternView.swift */,
 				BBC8781C2BA7569C00F36366 /* Assets.xcassets */,
 				BBC8781E2BA7569C00F36366 /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				BBC8781B2BA7569A00F36366 /* ContentView.swift in Sources */,
 				BBC878192BA7569A00F36366 /* SimpleSwiftUIProjectApp.swift in Sources */,
+				BBE341A92BB0484500834FB1 /* SimpleDelegatePatternView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
