@@ -21,6 +21,10 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            SubView1(user: viewModel)
+            SubView2(name: $name)
+        }
+        VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
@@ -57,6 +61,32 @@ struct ContentView: View {
         print("complete API call")
     }
 }
+
+
+struct SubView1: View {
+    @ObservedObject var user: ViewModel
+
+    var body: some View {
+        Text("Hello, \(user.name)")
+            .onReceive(user.$name) { newName in
+                print("User name changed to \(newName)")
+            }
+        TextField("Inner view", text: $user.name)
+//        Text("CFGetRetainCount: \(CFGetRetainCount(user))")
+    }
+}
+
+struct SubView2: View {
+    @Binding var name: String
+
+    var body: some View {
+        Text("SubView2: \(name)")
+        Button("click") {
+            name = "Annja"
+        }
+    }
+}
+
 
 #Preview {
     ContentView()
