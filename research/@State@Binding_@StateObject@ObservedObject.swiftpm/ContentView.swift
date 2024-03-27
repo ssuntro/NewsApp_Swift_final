@@ -7,19 +7,28 @@ class User: ObservableObject {
 struct ContentView: View {
     @StateObject var user = User()
 
-    @State var message = ""
+    @State private var message = ""
+    @State private var isPlaying: Bool = false
     var body: some View {
         VStack {
-            Text("Your name is \(user.name)")
-            TextField("Enter your name", text: $user.name)
+            
             TextField("Enter your counter", text: $message)
-            InnerView(user: user)
-                .background(Color.green)
+            Text("\(isPlaying)")
+            PlayButton(isPlaying: $isPlaying)
+            Button(message) {
+                message = "Ann ja"
+            }
+            
+//            Text("Your name is \(user.name)")
+//            TextField("Enter your name", text: $user.name)
+            Text("CFGetRetainCount: \(CFGetRetainCount(user))")
+//            SubView(user: user)
+//                .background(Color.green)
         }
     }
 }
-import SwiftUI
-struct InnerView: View {
+
+struct SubView: View {
     @ObservedObject var user: User
 
     var body: some View {
@@ -28,6 +37,18 @@ struct InnerView: View {
                 print("User name changed to \(newName)")
             }
         TextField("Inner view", text: $user.name)
+        Text("CFGetRetainCount: \(CFGetRetainCount(user))")
+    }
+}
+
+struct PlayButton: View {
+    @Binding var isPlaying: Bool
+
+    var body: some View {
+        Button(isPlaying ? "Pause" : "Play") {
+            isPlaying.toggle()
+//            print(CFGetRetainCount(isPlaying))
+        }
     }
 }
 #Preview {
