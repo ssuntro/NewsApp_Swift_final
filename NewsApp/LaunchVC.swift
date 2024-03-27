@@ -45,6 +45,8 @@ class LaunchVC: UIViewController {
 //            demoVC.modalPresentationStyle = .fullScreen //.pageSheet or .fullScreen
 //            self?.present(demoVC, animated: true, completion: nil)
             
+            
+            
 //            option#2
             guard let self = self, let window = self.view.window else { return }
             window.rootViewController = mainNewsVC
@@ -69,3 +71,33 @@ class LaunchVC: UIViewController {
         dinosaurView.play()
     }
 }
+
+
+//lottie 4.4.1 new syntax
+
+//lazy var dinosaurView: LottieAnimationView? = {
+//    let animationView = LottieAnimationView()
+//    let path = Bundle.main.path(forResource: "dino",
+//                                    ofType: "json") ?? ""
+//    if let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe),
+//        let jsonResult = try? JSONSerialization.jsonObject(with: data, options: .mutableLeaves),
+//        let jsonResult = jsonResult as? [String: Any],
+//        let animation = try? LottieAnimation(dictionary: jsonResult) {
+//        animationView.animation = animation
+//        animationView.frame = view.bounds
+//        animationView.contentMode = .scaleAspectFit
+//        animationView.loopMode = .loop
+//        animationView.animationSpeed = 0.5
+//        return animationView
+//    }
+//    return nil
+//}()
+
+//func animateDinosaur() {
+//    if let dinosaurView = dinosaurView {
+//        view.addSubview(dinosaurView)
+//        view.bringSubviewToFront(dinosaurView)
+//        dinosaurView.play()
+//    }
+//    
+//}
