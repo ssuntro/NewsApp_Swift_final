@@ -25,6 +25,8 @@ class LaunchVC: UIViewController {
         let vc = UIImagePickerController()
         vc.sourceType = .camera
         return vc
+        
+        //add plist. ask for user permission - Privacy - Camera Usage Description
     }()
     
     override func viewDidLoad() {
