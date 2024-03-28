@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB121A6A2BB5C41E0098976D /* UIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB121A692BB5C41E0098976D /* UIKitView.swift */; };
+		BB121A6C2BB5C9B90098976D /* LongBlock_mainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB121A6B2BB5C9B90098976D /* LongBlock_mainThread.swift */; };
 		BBA87AF22BB3FA4E00F87269 /* EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA87AF12BB3FA4E00F87269 /* EnvironmentObject.swift */; };
 		BBC878192BA7569A00F36366 /* SimpleSwiftUIProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC878182BA7569A00F36366 /* SimpleSwiftUIProjectApp.swift */; };
 		BBC8781B2BA7569A00F36366 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8781A2BA7569A00F36366 /* ContentView.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		BB121A692BB5C41E0098976D /* UIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitView.swift; sourceTree = "<group>"; };
+		BB121A6B2BB5C9B90098976D /* LongBlock_mainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongBlock_mainThread.swift; sourceTree = "<group>"; };
 		BBA87AF12BB3FA4E00F87269 /* EnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObject.swift; sourceTree = "<group>"; };
 		BBC878152BA7569A00F36366 /* SimpleSwiftUIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSwiftUIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC878182BA7569A00F36366 /* SimpleSwiftUIProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSwiftUIProjectApp.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				BBA87AF12BB3FA4E00F87269 /* EnvironmentObject.swift */,
 				BBC8781A2BA7569A00F36366 /* ContentView.swift */,
 				BB121A692BB5C41E0098976D /* UIKitView.swift */,
+				BB121A6B2BB5C9B90098976D /* LongBlock_mainThread.swift */,
 				BBE341A82BB0484500834FB1 /* SimpleDelegatePatternView.swift */,
 				BBC8781C2BA7569C00F36366 /* Assets.xcassets */,
 				BBC8781E2BA7569C00F36366 /* Preview Content */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB121A6C2BB5C9B90098976D /* LongBlock_mainThread.swift in Sources */,
 				BBC8781B2BA7569A00F36366 /* ContentView.swift in Sources */,
 				BBC878192BA7569A00F36366 /* SimpleSwiftUIProjectApp.swift in Sources */,
 				BBA87AF22BB3FA4E00F87269 /* EnvironmentObject.swift in Sources */,
