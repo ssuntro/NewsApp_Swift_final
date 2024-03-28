@@ -17,6 +17,7 @@ extension MainNewsVC: NewsVCDelegate {
     }
 }
 class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var siwftUIView: UIView!
     var news = [News]() {
         didSet {
             tableView.reloadData()
@@ -35,6 +36,18 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var appIconManager = AppIconManager()
     
     override func viewDidLoad() {
+        let socialImpactItem = UIHostingController(rootView: SocialImpactItem())
+        socialImpactItem.view.translatesAutoresizingMaskIntoConstraints = false
+        socialImpactItem.view.frame = siwftUIView.bounds
+        // First, add the view of the child to the view of the parent
+        siwftUIView.addSubview(socialImpactItem.view)
+        // Then, add the child to the parent
+//        siwftUIView.addChild(socialImpactItem)
+        
+        
+        
+        
+        
         super.viewDidLoad()
         loginButton.tintColor = .clear
         tableView.dataSource = self
