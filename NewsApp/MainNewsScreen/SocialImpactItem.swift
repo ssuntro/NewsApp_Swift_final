@@ -7,16 +7,17 @@
 
 import SwiftUI
 struct SocialImpactItem: View {
+    @State var showingSheet = false
     var body: some View {
         VStack {
             Spacer() //expand for max height
             VStack(alignment: .leading, spacing: 12) {
-                Text("20 sections - 3 hours".uppercased())
+                Text("Published on March 28th, 2024 at 1:00 PM Bangkok time.".uppercased())
                     .font(.footnote.weight(.semibold))
-                Text(verbatim: "SwiftUI")
+                Text(verbatim: "Lost Cat")
                     .font(.largeTitle.weight(.bold))
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text("Build an x app for iOS 18 with custom layouts, animations and ...")
+                Text("Kati is a friendly and curious Siamese with striking blue eyes. He/she has a sleek gray coat with white patches")
                     .font(.footnote)
             }
             .padding(20)
@@ -42,8 +43,17 @@ struct SocialImpactItem: View {
         .mask(
             RoundedRectangle(cornerRadius: 30, style: .continuous)
         )
-        .frame(width: 350, height: 220)
+        .frame(width: UIScreen.main.bounds.size.width - 40, height: 220)
         .padding(20)
+        .onTapGesture {
+            withAnimation {
+                showingSheet.toggle()
+            }
+        }.frame(maxHeight: .infinity)
+        .sheet(isPresented: $showingSheet, content: {
+            SocialImpactView()
+        })
+        
     }
 }
 
