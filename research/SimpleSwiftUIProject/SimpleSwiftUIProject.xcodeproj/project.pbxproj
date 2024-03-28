@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB121A6A2BB5C41E0098976D /* UIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB121A692BB5C41E0098976D /* UIKitView.swift */; };
 		BBA87AF22BB3FA4E00F87269 /* EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA87AF12BB3FA4E00F87269 /* EnvironmentObject.swift */; };
 		BBC878192BA7569A00F36366 /* SimpleSwiftUIProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC878182BA7569A00F36366 /* SimpleSwiftUIProjectApp.swift */; };
 		BBC8781B2BA7569A00F36366 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8781A2BA7569A00F36366 /* ContentView.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB121A692BB5C41E0098976D /* UIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitView.swift; sourceTree = "<group>"; };
 		BBA87AF12BB3FA4E00F87269 /* EnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObject.swift; sourceTree = "<group>"; };
 		BBC878152BA7569A00F36366 /* SimpleSwiftUIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSwiftUIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC878182BA7569A00F36366 /* SimpleSwiftUIProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSwiftUIProjectApp.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				BBC878182BA7569A00F36366 /* SimpleSwiftUIProjectApp.swift */,
 				BBA87AF12BB3FA4E00F87269 /* EnvironmentObject.swift */,
 				BBC8781A2BA7569A00F36366 /* ContentView.swift */,
+				BB121A692BB5C41E0098976D /* UIKitView.swift */,
 				BBE341A82BB0484500834FB1 /* SimpleDelegatePatternView.swift */,
 				BBC8781C2BA7569C00F36366 /* Assets.xcassets */,
 				BBC8781E2BA7569C00F36366 /* Preview Content */,
@@ -267,6 +270,7 @@
 				BBC878192BA7569A00F36366 /* SimpleSwiftUIProjectApp.swift in Sources */,
 				BBA87AF22BB3FA4E00F87269 /* EnvironmentObject.swift in Sources */,
 				BBE341A92BB0484500834FB1 /* SimpleDelegatePatternView.swift in Sources */,
+				BB121A6A2BB5C41E0098976D /* UIKitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

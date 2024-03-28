@@ -16,10 +16,46 @@ class ViewModel: ObservableObject {
 }
 //simple protocol and delegation pattern can be demo by integration UITextField in SwitftUI project. - see also in swiftUI_Delegation_pattern.playground
 struct ContentView: View {
+    @State private var showingSheet = false
+    
     @State var name = "JAAA"
     @StateObject var viewModel = ViewModel()
     
     var body: some View {
+        UIKitWrapperView(text: NSMutableAttributedString(string: "Hiii \(name)"))
+        Button("Show Sheet") {
+            showingSheet.toggle()
+        }
+        .sheet(isPresented: $showingSheet) {
+            UIKitWrapperView(text: NSMutableAttributedString(string: "Hiii \(name)"))
+    //        UIKitWrapperView()
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         VStack {
             SubView1(user: viewModel)
             SubView2(name: $name)
