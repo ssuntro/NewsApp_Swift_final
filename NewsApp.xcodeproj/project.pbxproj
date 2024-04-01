@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BB121A6E2BB5CD0E0098976D /* SocialImpactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB121A6D2BB5CD0E0098976D /* SocialImpactItem.swift */; };
 		BB121A702BB5D74D0098976D /* SocialImpactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB121A6F2BB5D74D0098976D /* SocialImpactView.swift */; };
+		BB14E8CD2BBB00F3001AB2F0 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB14E8CC2BBB00F3001AB2F0 /* CustomTabBar.swift */; };
 		BB1E92E627AAD7B2006DAAFB /* thai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB1E92E427AAD7B1006DAAFB /* thai@2x.png */; };
 		BB1E92E727AAD7B2006DAAFB /* thai@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB1E92E527AAD7B1006DAAFB /* thai@3x.png */; };
 		BB1E92EA27AADA41006DAAFB /* jp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB1E92E827AADA41006DAAFB /* jp@2x.png */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		BB121A6D2BB5CD0E0098976D /* SocialImpactItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialImpactItem.swift; sourceTree = "<group>"; };
 		BB121A6F2BB5D74D0098976D /* SocialImpactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialImpactView.swift; sourceTree = "<group>"; };
+		BB14E8CC2BBB00F3001AB2F0 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		BB1E92E427AAD7B1006DAAFB /* thai@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thai@2x.png"; sourceTree = "<group>"; };
 		BB1E92E527AAD7B1006DAAFB /* thai@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thai@3x.png"; sourceTree = "<group>"; };
 		BB1E92E827AADA41006DAAFB /* jp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jp@2x.png"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				BBBE211C279B190C00694126 /* AnnCoordinator.swift */,
 				BBBE211E279B192E00694126 /* CaptureImageView.swift */,
 				BBFE53D22792AC90006D05B3 /* NewsFetcherAwait.swift */,
+				BB14E8CC2BBB00F3001AB2F0 /* CustomTabBar.swift */,
 				BB91E21F27AFFCE900395AC6 /* DummyCell.xib */,
 				BBFE53D027915A9F006D05B3 /* LoadingView.xib */,
 				BBDD1C342789C2800069748B /* DemoVC.swift */,
@@ -386,6 +389,7 @@
 				BBDD1C42278B24230069748B /* NewsVC.swift in Sources */,
 				BBBE211D279B190C00694126 /* AnnCoordinator.swift in Sources */,
 				BBFE53DA2793DDFE006D05B3 /* AppIconManager.swift in Sources */,
+				BB14E8CD2BBB00F3001AB2F0 /* CustomTabBar.swift in Sources */,
 				BBDD1C2F278998B30069748B /* LaunchVC.swift in Sources */,
 				BBDD1C332789B1240069748B /* MainNewsVC.swift in Sources */,
 				BBDD1BFC278991110069748B /* AppDelegate.swift in Sources */,
