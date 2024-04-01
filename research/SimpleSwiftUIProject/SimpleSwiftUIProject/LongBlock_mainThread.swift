@@ -15,9 +15,12 @@ struct LongBlock_mainThread: View {
     }
 }
 
+//    DispatchQueue.global(qos: .background).async{
 func load(url: URL) {
-//        DispatchQueue.global().async { [weak self] in
-//        DispatchQueue.main.async(execute: <#T##DispatchWorkItem#>)
+    DispatchQueue.main.async {
+        print("NewsFetcher thread: \(Thread.current)")
+        print("NewsFetcher is main thread: \(Thread.isMainThread)")
+        
         if let data = try? Data(contentsOf: url) {
             if let image = UIImage(data: data) {
                 DispatchQueue.main.async {
@@ -25,7 +28,8 @@ func load(url: URL) {
                 }
             }
         }
-//        }
+    }
+
 }
 #Preview {
     LongBlock_mainThread()

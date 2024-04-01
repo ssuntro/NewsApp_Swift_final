@@ -56,7 +56,35 @@ struct SocialImpactItem: View {
         
     }
 }
-
 #Preview {
-    SocialImpactItem()
+//    SocialImpactItem()
+    PlaylistTableView()
 }
+
+//SwiftUI - example of tableview. pls help create 
+struct PlaylistTableView: View {
+  @State private var playlist = ["Chill Hits", "Indie Mix", "Hip Hop Vibes", "Pop Party"]
+
+  var body: some View {
+      List(playlist, id: \.self) { item in
+          HStack {
+              Image(systemName: "person.fill")
+              .resizable()
+              .aspectRatio(contentMode: .fill)
+              .frame(width: 70, height: 70)
+              .cornerRadius(5)
+              .padding(.leading, 8)
+            Text(item)
+              .font(.headline)
+              .lineLimit(1)
+            Spacer()
+          }
+          .padding(.vertical, 8)
+      
+    }
+    .navigationTitle("My Playlists")
+    .navigationBarItems(trailing: EditButton())
+  }
+    
+}
+
