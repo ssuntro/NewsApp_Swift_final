@@ -18,7 +18,6 @@ class NewsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         makeCircleBorder()
         typeBadge.isUserInteractionEnabled = false
-        
     }
     
     func makeCircleBorder() {
