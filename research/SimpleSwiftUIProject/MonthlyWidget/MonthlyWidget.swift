@@ -14,11 +14,11 @@ struct Provider: AppIntentTimelineProvider {
     }
 
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: configuration)
+        SimpleEntry(date: Date(), configuration: configuration) //what's your widget looks like like now
     }
     
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
-        var entries: [SimpleEntry] = []
+        var entries: [SimpleEntry] = [] //set of data
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
@@ -32,13 +32,13 @@ struct Provider: AppIntentTimelineProvider {
     }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct SimpleEntry: TimelineEntry { //rename to DayEntry
     let date: Date
     let configuration: ConfigurationAppIntent
 }
 
 struct MonthlyWidgetEntryView : View {
-    var entry: Provider.Entry
+    var entry: SimpleEntry
 
     var body: some View {
         VStack {
@@ -50,7 +50,15 @@ struct MonthlyWidgetEntryView : View {
         }
     }
 }
-
+extension Date {
+    var weekdayDisplayFormat: String {
+        self.formatted(.dateTime.weekday(.wide))
+    }
+    
+    var dayDisplayFormat: String {
+        self.formatted(.dateTime.day())
+    }
+}
 struct MonthlyWidget: Widget {
     let kind: String = "MonthlyWidget"
 
