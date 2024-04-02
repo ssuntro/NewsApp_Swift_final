@@ -66,7 +66,9 @@ struct MonthlyWidget: Widget {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
             MonthlyWidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
+                
         }
+        .supportedFamilies([.systemSmall])
     }
 }
 
