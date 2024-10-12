@@ -34,7 +34,6 @@ struct SocialImpactItem: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
         )
-        
         .background(
             Image(uiImage: UIImage(imageLiteralResourceName:  "Background 5.jpg"))
                 .resizable()

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB0629BE2BBDA0C700731034 /* SwiftUI_list.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0629BD2BBDA0C700731034 /* SwiftUI_list.swift */; };
 		BB121A6A2BB5C41E0098976D /* UIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB121A692BB5C41E0098976D /* UIKitView.swift */; };
 		BB121A6C2BB5C9B90098976D /* LongBlock_mainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB121A6B2BB5C9B90098976D /* LongBlock_mainThread.swift */; };
 		BB14E9022BBC6396001AB2F0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB14E9012BBC6396001AB2F0 /* WidgetKit.framework */; };
@@ -67,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BB0629BD2BBDA0C700731034 /* SwiftUI_list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUI_list.swift; sourceTree = "<group>"; };
 		BB121A692BB5C41E0098976D /* UIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitView.swift; sourceTree = "<group>"; };
 		BB121A6B2BB5C9B90098976D /* LongBlock_mainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongBlock_mainThread.swift; sourceTree = "<group>"; };
 		BB14E8FF2BBC6396001AB2F0 /* MonthlyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MonthlyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +181,7 @@
 				BBC8781A2BA7569A00F36366 /* ContentView.swift */,
 				BB121A692BB5C41E0098976D /* UIKitView.swift */,
 				BB121A6B2BB5C9B90098976D /* LongBlock_mainThread.swift */,
+				BB0629BD2BBDA0C700731034 /* SwiftUI_list.swift */,
 				BBE341A82BB0484500834FB1 /* SimpleDelegatePatternView.swift */,
 				BBC8781C2BA7569C00F36366 /* Assets.xcassets */,
 				BBC8781E2BA7569C00F36366 /* Preview Content */,
@@ -384,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB121A6C2BB5C9B90098976D /* LongBlock_mainThread.swift in Sources */,
+				BB0629BE2BBDA0C700731034 /* SwiftUI_list.swift in Sources */,
 				BBC8781B2BA7569A00F36366 /* ContentView.swift in Sources */,
 				BBC878192BA7569A00F36366 /* SimpleSwiftUIProjectApp.swift in Sources */,
 				BBA87AF22BB3FA4E00F87269 /* EnvironmentObject.swift in Sources */,
