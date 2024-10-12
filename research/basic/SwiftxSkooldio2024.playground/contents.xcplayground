@@ -12,5 +12,8 @@
         <page name='typeInference'/>
         <page name='function2'/>
         <page name='dataTypes_exercise3'/>
+        <page name='mapkit_demo'/>
+        <page name='string_postTest'/>
+        <page name='value_type_ref_type'/>
     </pages>
 </playground>
