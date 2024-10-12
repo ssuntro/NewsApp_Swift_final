@@ -34,9 +34,11 @@ let unnamedTuple = ("John")
 let unnamedTuple1 = ("John", "Doe", 30)
 print(unnamedTuple)
 print(unnamedTuple1.0) // Output: John
+print(unnamedTuple1.1) // Output: Doe
 
 let namedTuple = (firstName: "John", lastName: "Doe", age: 30)
 print(namedTuple.firstName) // Output: John
+let namedTuple1 = namedTuple
 
 // Function returning a tuple
 func getPerson() -> (firstName: String, lastName: String, age: Int) {
