@@ -30,14 +30,14 @@ let targetPlanet = Planet(rawValue: 3)
 let notFoundPlanet = Planet(rawValue: 111)
 
 enum AnimalSound: String {
-    case human = "Hi"
+    case human
     case dog = "Woof"
     case cow = "Moo"
     case fox = "DingDing"
 }
 print(AnimalSound.fox.rawValue)
-
-
+let animal = AnimalSound.init(rawValue: "human") //AnimalSound.human
+let animal1 = AnimalSound.init(rawValue: "Human") 
 
 //TOPIC: associated type
 //#1
