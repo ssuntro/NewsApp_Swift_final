@@ -6,7 +6,9 @@
 //
 
 import Foundation
-struct News {
+struct News: Identifiable {
+
+    let id = UUID()
     let detail: NewsDetail
     let category: NewsCategory
 }

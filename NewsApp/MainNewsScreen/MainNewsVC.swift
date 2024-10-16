@@ -36,7 +36,7 @@ class MainNewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var appIconManager = AppIconManager()
     
     override func viewDidLoad() {
-        let socialImpactItem = UIHostingController(rootView: SocialImpactItem())
+        let socialImpactItem = UIHostingController(rootView: SocialImpactItem()) //loginView(), SocialImpactItem()), Animation1View()
         socialImpactItem.view.translatesAutoresizingMaskIntoConstraints = false
         socialImpactItem.view.frame = siwftUIView.bounds
         // First, add the view of the child to the view of the parent
