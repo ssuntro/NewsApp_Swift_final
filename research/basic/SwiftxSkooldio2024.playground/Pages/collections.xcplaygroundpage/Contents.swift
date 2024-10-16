@@ -69,7 +69,3 @@ for (index, element) in array1.enumerated() {
 for (number, letter) in zip([1, 2, 3], ["a", "b", "c"]) {
     print("\(number): \(letter)")
 }
-
-
-
-

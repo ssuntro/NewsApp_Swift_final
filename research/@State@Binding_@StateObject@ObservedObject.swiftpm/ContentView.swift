@@ -2,33 +2,38 @@ import SwiftUI
 
 class User: ObservableObject {
     @Published var name: String = "eiei"
+    init(name: String) {
+        self.name = name
+    }
 }
 
 struct ContentView: View {
-    @StateObject var user = User()
+    @StateObject private var user: User = User(name: "ContentView")
 
-    @State private var message = ""
+    @State private var message = "message"
     @State private var isPlaying: Bool = false
     var body: some View {
         VStack {
             
-            TextField("Enter your counter", text: $message)
+            TextField("Enter your counter", text: $message) //two-way binding, need to be @State var to create Binding<T> type
             Text("\(isPlaying)")
-            PlayButton(isPlaying: $isPlaying)
+            Text("Annja") //one-way binding no need to be @State var
+            ValueTypeDataBindingButton(isPlaying: $isPlaying)
             Button(message) {
                 message = "Ann ja"
             }
             
-//            Text("Your name is \(user.name)")
-//            TextField("Enter your name", text: $user.name)
+            Divider()
+            Text("Your name is \(user.name)")
+            TextField("Enter your name", text: $user.name)
             Text("CFGetRetainCount: \(CFGetRetainCount(user))")
-//            SubView(user: user)
-//                .background(Color.green)
+            RefTypeDataBidingView(user: user)
+                .background(Color.green)
         }
     }
 }
 
-struct SubView: View {
+struct RefTypeDataBidingView: View {
     @ObservedObject var user: User
 
     var body: some View {
@@ -41,7 +46,7 @@ struct SubView: View {
     }
 }
 
-struct PlayButton: View {
+struct ValueTypeDataBindingButton: View {
     @Binding var isPlaying: Bool
 
     var body: some View {
@@ -52,5 +57,11 @@ struct PlayButton: View {
     }
 }
 #Preview {
-    ContentView(user: User())
+    //compile error
+//    @State var  a = "uuu"
+    ContentView()
+    
+    
+//    ContentView(user: User(name: "Preview"))
+//    ContentView(user: User())
 }
